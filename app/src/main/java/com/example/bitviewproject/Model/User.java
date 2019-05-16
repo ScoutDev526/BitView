@@ -1,17 +1,36 @@
 package com.example.bitviewproject.Model;
 
-public class User {
+import io.realm.RealmObject;
+import io.realm.annotations.Index;
+import io.realm.annotations.PrimaryKey;
+import io.realm.annotations.Required;
 
-    String name, lastName, username, password, email;
+public class User extends RealmObject {
+
+    @Index
+    @PrimaryKey
+    int id;
+
+    String name;
+    String lastName;
+
+    @Required
+    String username;
+
+    @Required
+    String password;
+
+    @Required
+    String email;
+
     int balance;
 
-    public User(String name, String lastName, String username, String password, String email, int balance) {
-        this.name = name;
-        this.lastName = lastName;
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.balance = balance;
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
