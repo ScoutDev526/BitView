@@ -1,14 +1,16 @@
 package com.example.bitviewproject.Controller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.bitviewproject.Adapters.MainAdapters.RecyclerViewPrincipalAdapter;
 import com.example.bitviewproject.Helper.Helper;
-import com.example.bitviewproject.Model.CryptoCurrency;
 import com.example.bitviewproject.R;
 import com.example.bitviewproject.Service.impl.CryptoCurrencyService;
 import com.example.bitviewproject.Service.impl.UserService;
@@ -29,6 +31,7 @@ public class MainController extends AppCompatActivity {
     Helper helper;
 
     CryptoCurrencyController currencyController;
+    Button changeLayout;
 
 
     @Override
@@ -43,11 +46,16 @@ public class MainController extends AppCompatActivity {
 
 
         userService.addUserFirstTime();
-        /*if (realm.isClosed()){
-            realm = Realm.getDefaultInstance();
-        }*/
         cryptoCurrencyService.addCryptoCurrencyFirstTime();
 
+        changeLayout = findViewById(R.id.btnChangeLayout);
+        changeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ListofCryptoCurrenciesActivity.class);
+                startActivity(intent);
+            }
+        });
 
         recyclerView = findViewById(R.id.recycler);
 

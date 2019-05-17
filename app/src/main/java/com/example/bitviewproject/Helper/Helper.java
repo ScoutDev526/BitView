@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
+import io.realm.Sort;
 
 public class Helper {
 
@@ -31,6 +32,12 @@ public class Helper {
     public void getCryptoCurreciesFromDB(){
 
         cryptoCurrencies = realm.where(CryptoCurrency.class).findAll();
+
+    }
+
+    public void getCryptoCurrenciesSortByValueFromDB(){
+
+        cryptoCurrencies = realm.where(CryptoCurrency.class).sort("value", Sort.DESCENDING).findAll();
 
     }
 

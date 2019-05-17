@@ -52,7 +52,8 @@ public class CryptoCurrencyController extends AppCompatActivity {
         Intent intent = getIntent();
         int currencyId = intent.getIntExtra("currencyId", 0);
 
-        cryptoCurrency = realm.where(CryptoCurrency.class).equalTo("id", currencyId).findFirst();
+        cryptoCurrency = realm.where(CryptoCurrency.class)
+                .equalTo("id", currencyId).findFirst();
 
         nameCurrencyDetails.setText(cryptoCurrency.getName());
         valueCurrencyDetails.setText("Valor: " + cryptoCurrency.getValue());

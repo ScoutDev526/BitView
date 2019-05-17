@@ -10,13 +10,11 @@ import android.view.ViewGroup;
 
 import com.example.bitviewproject.Controller.CryptoCurrencyController;
 import com.example.bitviewproject.Model.CryptoCurrency;
-import com.example.bitviewproject.Model.User;
 import com.example.bitviewproject.R;
 
 import java.util.ArrayList;
 
 import io.realm.Realm;
-import io.realm.RealmObject;
 
 public class RecyclerViewPrincipalAdapter extends RecyclerView.Adapter<HolderViewPrincipalAdapter> {
 
@@ -34,7 +32,8 @@ public class RecyclerViewPrincipalAdapter extends RecyclerView.Adapter<HolderVie
     @NonNull
     @Override
     public HolderViewPrincipalAdapter onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View view = LayoutInflater.from(context).inflate(R.layout.principal_cardviews, viewGroup, false);
+        View view = LayoutInflater.from(context)
+                .inflate(R.layout.principal_cardviews, viewGroup, false);
 
         return new HolderViewPrincipalAdapter(view);
     }
@@ -45,7 +44,7 @@ public class RecyclerViewPrincipalAdapter extends RecyclerView.Adapter<HolderVie
 
         holder.txtNameCurrency.setText(currency.getName());
         holder.txtValue.setText(Integer.toString(currency.getValue()));
-        // TODO: SET IMAGE
+
         holder.iconCurrency.setImageResource(R.drawable.flip);
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
