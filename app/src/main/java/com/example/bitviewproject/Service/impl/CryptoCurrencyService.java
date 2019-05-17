@@ -17,36 +17,42 @@ public class CryptoCurrencyService {
 
     public void addCryptoCurrencyFirstTime() {
 
-        try {
-            realm = Realm.getDefaultInstance();
+        if (isCurrenciesEmpty()) {
+            for(int i = 0; i<10; i++) {
+                try {
+                    realm = Realm.getDefaultInstance();
 
-            realm.executeTransactionAsync(new Realm.Transaction() {
-                @Override
-                public void execute(Realm bgRealm) {
-                    Number maxId = bgRealm.where(CryptoCurrency.class).max("id");
-                    int newKey = (maxId == null) ? 1 : maxId.intValue()+1;
+                    realm.executeTransactionAsync(new Realm.Transaction() {
+                        @Override
+                        public void execute(Realm bgRealm) {
+                            Number maxId = bgRealm.where(CryptoCurrency.class).max("id");
+                            int newKey = (maxId == null) ? 1 : maxId.intValue() + 1;
 
-                    CryptoCurrency currency = bgRealm.createObject(CryptoCurrency.class, newKey);
-                    currency.setName("MONEDA"+newKey);
-                    currency.setValue(newKey);
+                            CryptoCurrency currency = bgRealm.createObject(CryptoCurrency.class, newKey);
+                            currency.setName("MONEDA" + newKey);
+                            currency.setValue(newKey);
 
+                        }
+                    }, new Realm.Transaction.OnSuccess() {
+                        @Override
+                        public void onSuccess() {
+                            Log.v("BITVIEW", "AÑADE LA MONEDA");
+
+                        }
+                    }, new Realm.Transaction.OnError() {
+                        @Override
+                        public void onError(Throwable error) {
+                            Log.v("BITVIEW", "ERROR CREANDO MONEDAS");
+                        }
+                    });
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    realm.close();
                 }
-            }, new Realm.Transaction.OnSuccess() {
-                @Override
-                public void onSuccess() {
-                    Log.v("BITVIEW", "AÑADE LA MONEDA");
-
-                }
-            }, new Realm.Transaction.OnError() {
-                @Override
-                public void onError(Throwable error) {
-                    Log.v("BITVIEW", "ERROR CREANDO MONEDAS");
-                }
-            });
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            realm.close();
+            }
+        } else {
+            Log.v("BITVIEW", "YA EXISTIAN DATOS CURRENCIES");
         }
 
     }
@@ -57,5 +63,13 @@ public class CryptoCurrencyService {
 
     public RealmResults<CryptoCurrency> getAllCurrencies() {
         return realm.where(CryptoCurrency.class).findAll();
+    }
+
+    private Boolean isCurrenciesEmpty(){
+        RealmResults<CryptoCurrency> results = realm.where(CryptoCurrency.class).findAll();
+        if (results.isEmpty()){
+            return true;
+        }
+        return false;
     }
 }
