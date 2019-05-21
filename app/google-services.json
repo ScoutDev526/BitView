@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "839799650779",
+    "firebase_url": "https://bitview-4c01c.firebaseio.com",
+    "project_id": "bitview-4c01c",
+    "storage_bucket": "bitview-4c01c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839799650779:android:194d93b855740f91",
+        "android_client_info": {
+          "package_name": "com.example.bitviewproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839799650779-9i6j5da0s9ae5r1na49m7i75uajpbpl5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfIkR5wHNo4iyxPCG8N4cXfYOMUlfTCPo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839799650779-9i6j5da0s9ae5r1na49m7i75uajpbpl5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
