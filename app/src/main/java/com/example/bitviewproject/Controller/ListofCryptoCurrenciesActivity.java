@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Button;
 
 import com.example.bitviewproject.Adapters.ListofCurrenciesAdapters.RecyclerViewListofCryptoCurrencyAdapter;
 import com.example.bitviewproject.Helper.Helper;

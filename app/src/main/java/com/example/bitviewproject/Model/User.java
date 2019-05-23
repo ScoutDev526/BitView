@@ -1,5 +1,6 @@
 package com.example.bitviewproject.Model;
 
+import io.realm.RealmList;
 import io.realm.RealmObject;
 import io.realm.annotations.Index;
 import io.realm.annotations.PrimaryKey;
@@ -22,6 +23,16 @@ public class User extends RealmObject {
 
     @Required
     String email;
+
+    RealmList<CryptoCurrency> cryptoCurrencies;
+
+    public RealmList<CryptoCurrency> getCryptoCurrencies() {
+        return cryptoCurrencies;
+    }
+
+    public void setCryptoCurrencies(RealmList<CryptoCurrency> cryptoCurrencies) {
+        this.cryptoCurrencies = cryptoCurrencies;
+    }
 
     int balance;
 

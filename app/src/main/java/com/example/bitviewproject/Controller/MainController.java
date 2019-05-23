@@ -1,7 +1,10 @@
 package com.example.bitviewproject.Controller;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -30,8 +33,7 @@ public class MainController extends AppCompatActivity {
     Realm realm;
     Helper helper;
 
-    CryptoCurrencyController currencyController;
-    Button changeLayout;
+    Button changeLayout, changeLogin, actionLogout, changeUserDetails;
 
 
     @Override
@@ -53,6 +55,34 @@ public class MainController extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ListofCryptoCurrenciesActivity.class);
+                startActivity(intent);
+            }
+        });
+        changeLogin = findViewById(R.id.btnLoginActivity);
+        changeLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), LoginController.class);
+                startActivity(intent);
+            }
+        });
+
+        actionLogout = findViewById(R.id.btnLogOut);
+        actionLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences preferences = getSharedPreferences("SharedPreferencesUserLogin", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.remove("userId");
+                editor.apply();
+            }
+        });
+
+        changeUserDetails = findViewById(R.id.btnProfile);
+        changeUserDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), DetailsUsersController.class);
                 startActivity(intent);
             }
         });

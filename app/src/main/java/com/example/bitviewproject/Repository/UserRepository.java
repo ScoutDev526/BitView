@@ -2,20 +2,29 @@ package com.example.bitviewproject.Repository;
 
 import com.example.bitviewproject.Model.User;
 
+import io.realm.Realm;
 import io.realm.RealmResults;
 
 public class UserRepository {
 
-    User findById(int id){
-        return null;
+    public User findById(Realm realm, int id){
+        return realm.where(User.class).equalTo("id", id).findFirst();
     }
 
-    RealmResults<User> findAllUsers(){
-        return null;
+    public RealmResults<User> findAllUsers(Realm realm){
+        return realm.where(User.class).findAll();
     }
 
-    User findFirst(){
-        return null;
+    public User findFirst(Realm realm){
+        return realm.where(User.class).findFirst();
+    }
+
+    public Boolean isAuthenticate(Realm realm, String username, String password){
+        return realm.where(User.class)
+                .equalTo("username", username)
+                .and()
+                .equalTo("password", password)
+                .findFirst().isLoaded();
     }
 
 }

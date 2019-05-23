@@ -2,24 +2,30 @@ package com.example.bitviewproject.Adapters.ListofCurrenciesAdapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.bitviewproject.Controller.CryptoCurrencyController;
 import com.example.bitviewproject.Model.CryptoCurrency;
+import com.example.bitviewproject.Model.User;
 import com.example.bitviewproject.R;
 
 import java.util.ArrayList;
 
 import io.realm.Realm;
+import io.realm.RealmList;
 
 public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapter<HolderViewListofCryptoCurrency> {
 
-    Realm realm;
-    Context context;
+    static final String TAG = "ADAPTERLISTA";
+
+    final Realm realm;
+    final Context context;
     ArrayList <CryptoCurrency> cryptoCurrencies;
 
     public RecyclerViewListofCryptoCurrencyAdapter(Realm realm, Context context, ArrayList<CryptoCurrency> cryptoCurrencies) {
@@ -37,20 +43,59 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull HolderViewListofCryptoCurrency holder, int i) {
+    public void onBindViewHolder(@NonNull final HolderViewListofCryptoCurrency holder, int i) {
         final CryptoCurrency currency = cryptoCurrencies.get(i);
 
         holder.txtNameCurrency.setText(currency.getName());
-        //holder.txtValue.setText(Integer.toString(currency.getValue()));
-
+        holder.ID.setText(Integer.toString(currency.getId())); Log.e(TAG, "----> currencyID = " + currency.getId());
         holder.iconCurrency.setImageResource(R.drawable.flip);
 
+        SharedPreferences preferences = context.getSharedPreferences("SharedPreferencesUserLogin", Context.MODE_PRIVATE);
+        String id = preferences.getString("userId", "0");
+        User user = realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst();
+        boolean used = false;
+        for (CryptoCurrency c: user.getCryptoCurrencies()) {
+            if (c.getId() == currency.getId()){
+                used = true; Log.e(TAG, "-------> used true");
+                break;
+            }
+        }
+        if (used) holder.button.setEnabled(false);
+
+        // TODO: EVENTOS
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, CryptoCurrencyController.class);
-                intent.putExtra("currencyId", currency.getId());
-                context.startActivity(intent);
+                goToCryptoCurrencyDetails(currency);
+            }
+        });
+        holder.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                realm.executeTransactionAsync(new Realm.Transaction() {
+                    @Override
+                    public void execute(Realm realm) {
+                        SharedPreferences preferences = context.getSharedPreferences("SharedPreferencesUserLogin", Context.MODE_PRIVATE);
+                        String id = preferences.getString("userId", "0");
+
+                        User user = realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst();
+                        CryptoCurrency cryptoCurrency = realm.where(CryptoCurrency.class).equalTo("id", Integer.parseInt(holder.ID.getText().toString())).findFirst();
+
+                        user.getCryptoCurrencies().add(cryptoCurrency);
+                    }
+                }, new Realm.Transaction.OnSuccess() {
+                    @Override
+                    public void onSuccess() {
+                        Log.d(TAG, "Ha funcionado xd");
+                        Log.i(TAG, "La i tambien funsiona");
+                        holder.button.setEnabled(false);
+                    }
+                }, new Realm.Transaction.OnError() {
+                    @Override
+                    public void onError(Throwable error) {
+                        error.printStackTrace();
+                    }
+                });
             }
         });
     }
@@ -63,5 +108,11 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
     @Override
     public void onAttachedToRecyclerView(@NonNull RecyclerView recyclerView) {
         super.onAttachedToRecyclerView(recyclerView);
+    }
+
+    private void goToCryptoCurrencyDetails(CryptoCurrency currency){
+        Intent intent = new Intent(context, CryptoCurrencyController.class);
+        intent.putExtra("currencyId", currency.getId());
+        context.startActivity(intent);
     }
 }

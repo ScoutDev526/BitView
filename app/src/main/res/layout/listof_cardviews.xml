@@ -9,6 +9,12 @@
     android:layout_margin="10dp"
     android:id="@+id/cardViewListof">
 
+    <TextView
+        android:id="@+id/cardID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -26,17 +32,41 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_marginStart="30dp"
-            android:layout_weight="3">
+            android:layout_weight="3"
+            android:weightSum="2">
 
-            <TextView
-                android:id="@+id/nameCurrencyListof"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="55dp"
-                android:text="Moneda"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/nameCurrencyListof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Moneda"
+                    android:textColor="#000000"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btnAddCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Añadir" />
+
+            </LinearLayout>
 
 
         </LinearLayout>
