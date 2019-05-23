@@ -18,7 +18,6 @@ import com.example.bitviewproject.R;
 import java.util.ArrayList;
 
 import io.realm.Realm;
-import io.realm.RealmList;
 
 public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapter<HolderViewListofCryptoCurrency> {
 
@@ -45,9 +44,14 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
     @Override
     public void onBindViewHolder(@NonNull final HolderViewListofCryptoCurrency holder, int i) {
         final CryptoCurrency currency = cryptoCurrencies.get(i);
+        final int currenId = currency.getId();
+
+        Log.e(TAG, "-----------------------------------");
+        Log.e(TAG, Integer.toString(currenId));
 
         holder.txtNameCurrency.setText(currency.getName());
-        holder.ID.setText(Integer.toString(currency.getId())); Log.e(TAG, "----> currencyID = " + currency.getId());
+        holder.ID.setText(Integer.toString(currency.getId()));
+        Log.e(TAG, "----> currencyID = " + currency.getId());
         holder.iconCurrency.setImageResource(R.drawable.flip);
 
         SharedPreferences preferences = context.getSharedPreferences("SharedPreferencesUserLogin", Context.MODE_PRIVATE);
@@ -55,6 +59,7 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
         User user = realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst();
         boolean used = false;
         for (CryptoCurrency c: user.getCryptoCurrencies()) {
+            Log.i(TAG, "-----> " + c.getId());
             if (c.getId() == currency.getId()){
                 used = true; Log.e(TAG, "-------> used true");
                 break;
@@ -77,9 +82,13 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
                     public void execute(Realm realm) {
                         SharedPreferences preferences = context.getSharedPreferences("SharedPreferencesUserLogin", Context.MODE_PRIVATE);
                         String id = preferences.getString("userId", "0");
+                        SharedPreferences.Editor editor = preferences.edit();
+                        editor.putString("ID" + currenId, String.valueOf(currenId));
+                        editor.apply();
 
                         User user = realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst();
                         CryptoCurrency cryptoCurrency = realm.where(CryptoCurrency.class).equalTo("id", Integer.parseInt(holder.ID.getText().toString())).findFirst();
+                        Log.i(TAG, "Se ha guardado en el usuario: " + user.getId());
 
                         user.getCryptoCurrencies().add(cryptoCurrency);
                     }
