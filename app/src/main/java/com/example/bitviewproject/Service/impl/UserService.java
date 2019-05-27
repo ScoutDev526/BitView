@@ -22,7 +22,6 @@ public class UserService {
     public void addUserFirstTime() {
 
         if(isUserEmpty()) {
-            for (int y = 0; y < 10; y++){
                 try {
                     realm = Realm.getDefaultInstance();
 
@@ -33,9 +32,9 @@ public class UserService {
                             int newKey = (maxId == null) ? 1 : maxId.intValue() + 1;
 
                             User user = bgRealm.createObject(User.class, newKey);
-                            user.setUsername("Username" + newKey);
-                            user.setPassword("Password" + newKey);
-                            user.setEmail("email" + newKey + "@mail.es");
+                            user.setUsername("admin");
+                            user.setPassword("admin");
+                            user.setEmail("ferrerasdiazcesar@gmail.com");
                         }
                     }, new Realm.Transaction.OnSuccess() {
                         @Override
@@ -53,7 +52,6 @@ public class UserService {
                 } finally {
                     realm.close();
                 }
-            }
         } else {
             Log.v("BITVIEW", "YA EXISTIAN DATOS USERS");
         }

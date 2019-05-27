@@ -34,8 +34,6 @@ public class User extends RealmObject {
         this.cryptoCurrencies = cryptoCurrencies;
     }
 
-    int balance;
-
     public int getId() {
         return id;
     }
@@ -82,13 +80,5 @@ public class User extends RealmObject {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public int getBalance() {
-        return balance;
-    }
-
-    public void setBalance(int balance) {
-        this.balance = balance;
     }
 }

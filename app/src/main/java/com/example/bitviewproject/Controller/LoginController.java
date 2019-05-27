@@ -50,6 +50,7 @@ public class LoginController extends AppCompatActivity {
 
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("userId", Integer.toString(userLog.getId()));
+                    Log.i("SHAREDPREFERENCE", "SE HA GUARDADO ESTO ----->" + userLog.getId());
                     editor.apply();
 
                     finish();

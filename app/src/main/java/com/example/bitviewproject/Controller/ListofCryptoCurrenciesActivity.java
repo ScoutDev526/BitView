@@ -43,5 +43,6 @@ public class ListofCryptoCurrenciesActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         realm.close();
+        finish();
     }
 }

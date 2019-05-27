@@ -3,7 +3,6 @@ package com.example.bitviewproject.Adapters.UserDetailsAdapters;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,13 +36,18 @@ public class RecyclerViewUserDetailsAdapter extends RecyclerView.Adapter<HolderV
 
     @Override
     public void onBindViewHolder(@NonNull HolderViewUserDetails holder, int i) {
-        final CryptoCurrency currency = cryptoCurrencies.get(i);
+        if (cryptoCurrencies != null && cryptoCurrencies.get(0).getId() != 0) {
+            final CryptoCurrency currency = cryptoCurrencies.get(i);
+            holder.idCurrency.setText(Integer.toString(currency.getId()));
+            holder.nameCurrency.setText(currency.getName());
+            holder.valueCurrency.setText(Integer.toString(currency.getValue()));
+        }else {
+            holder.idCurrency.setText("1234");
+            holder.nameCurrency.setText("BitView");
+            holder.valueCurrency.setText("979796");
+            holder.imageView.setImageResource(R.drawable.bit);
+        }
 
-        if (currency == null) Log.e("CURRENCYNULL", "No lo pilla JOOOODERRRRR");
-
-        holder.idCurrency.setText(Integer.toString(currency.getId()));
-        holder.nameCurrency.setText(currency.getName());
-        holder.valueCurrency.setText(Integer.toString(currency.getValue()));
     }
 
     @Override

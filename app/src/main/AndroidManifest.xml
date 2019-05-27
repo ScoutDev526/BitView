@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Controller.DetailsUsersController"></activity>
+        <activity android:name=".Controller.DetailsUsersController" />
         <activity android:name=".Controller.ListofCryptoCurrenciesActivity" />
         <activity android:name=".Controller.CryptoCurrencyController" />
         <activity android:name=".Controller.LoginController" />

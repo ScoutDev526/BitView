@@ -12,8 +12,11 @@ public class BitViewApplication extends Application {
         super.onCreate();
         Realm.init(this);
         RealmConfiguration configuration = new RealmConfiguration.Builder()
+                .deleteRealmIfMigrationNeeded()
                 .name("BitViewDataBase.realm")
+                .schemaVersion(1)
                 .build();
         Realm.setDefaultConfiguration(configuration);
     }
+
 }

@@ -15,6 +15,7 @@ import com.example.bitviewproject.Model.CryptoCurrency;
 import com.example.bitviewproject.Model.User;
 import com.example.bitviewproject.R;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import io.realm.Realm;
@@ -58,12 +59,19 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
         String id = preferences.getString("userId", "0");
         User user = realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst();
         boolean used = false;
-        for (CryptoCurrency c: user.getCryptoCurrencies()) {
-            Log.i(TAG, "-----> " + c.getId());
-            if (c.getId() == currency.getId()){
-                used = true; Log.e(TAG, "-------> used true");
-                break;
+        try {
+            if(user != null) {
+                for (CryptoCurrency c: user.getCryptoCurrencies()) {
+                    Log.i(TAG, "-----> " + c.getId());
+                    if (c.getId() == currency.getId()){
+                        used = true; Log.e(TAG, "-------> used true");
+                        break;
+                    }
+                }
             }
+
+        }catch (Exception e) {
+            Log.e("ERROR", String.valueOf(e));
         }
         if (used) holder.button.setEnabled(false);
 
