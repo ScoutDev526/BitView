@@ -102,6 +102,7 @@
                             android:id="@+id/idCurrencyUserDetails"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
                             android:textColor="#000000"
                             android:textStyle="bold|italic"
                             android:layout_gravity="start" />
@@ -110,6 +111,7 @@
                             android:id="@+id/nameCurrencyUserDetails"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
                             android:layout_marginTop="5dp"
                             android:textColor="#000000"
                             android:textStyle="bold|italic"
@@ -119,6 +121,7 @@
                             android:id="@+id/valueCurrencyUserDetails"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
                             android:layout_marginTop="5dp"
                             android:textColor="#000000"
                             android:textStyle="bold|italic"

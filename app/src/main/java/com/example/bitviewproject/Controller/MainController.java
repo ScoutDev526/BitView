@@ -6,30 +6,28 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.bitviewproject.Adapters.MainAdapters.RecyclerViewPrincipalAdapter;
 import com.example.bitviewproject.Helper.Helper;
+import com.example.bitviewproject.Helper.HelperBitCoinAPI;
+import com.example.bitviewproject.Model.CryptoCurrency;
 import com.example.bitviewproject.R;
-import com.example.bitviewproject.Service.impl.CryptoCurrencyService;
-import com.example.bitviewproject.Service.impl.UserService;
+import com.example.bitviewproject.Service.impl.CryptoCurrencyServiceImpl;
+import com.example.bitviewproject.Service.impl.UserServiceImpl;
 
 import io.realm.Realm;
 import io.realm.RealmChangeListener;
+import okhttp3.OkHttpClient;
 
 public class MainController extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -38,65 +36,55 @@ public class MainController extends AppCompatActivity
 
     RealmChangeListener realmChangeListener;
 
-    UserService userService;
-    CryptoCurrencyService cryptoCurrencyService;
+    UserServiceImpl userServiceImpl;
+    CryptoCurrencyServiceImpl cryptoCurrencyServiceImpl;
 
     Realm realm;
     Helper helper;
+    HelperBitCoinAPI bitCoinAPI;
 
-    Button changeLayout, changeLogin, actionLogout, changeUserDetails;
+    //Button changeLayout, changeLogin, actionLogout, changeUserDetails;
+
+    public static final String JSON_LIST_CURRENCIES = "https://api.cryptonator.com/api/full/btc-usd";
+    private OkHttpClient okHttpClient = new OkHttpClient();
+
+    TextView textView;
+    String value;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        //Toolbar toolbar = findViewById(R.id.toolBar);
-        //setSupportActionBar(toolbar);
-        //FloatingActionButton fab = findViewById(R.id.fab);
-        /*fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Snackbar.make(v, "ACTION", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null)
-                        .show();
-            }
-        });*/
-        DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        //ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-        //        this, drawerLayout, toolbar, R.string.open, R.string.close);
-        //drawerLayout.addDrawerListener(toggle);
-        //toggle.syncState();
-        navigationView.setNavigationItemSelectedListener(this);
-
-        realm = Realm.getDefaultInstance();
-
-        userService = new UserService(realm);
-        cryptoCurrencyService = new CryptoCurrencyService(realm);
-
-
-        userService.addUserFirstTime();
-        cryptoCurrencyService.addCryptoCurrencyFirstTime();
-
-        recyclerView = findViewById(R.id.recycler);
-
-        helper = new Helper(realm);
-        helper.getCryptoCurreciesFromDB();
-
-        RecyclerViewPrincipalAdapter controller = new
-                RecyclerViewPrincipalAdapter(this, helper.refreshCryptoCurrencies(), realm);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(controller);
-
-        refresh();
+        try {
+            realm = Realm.getDefaultInstance();
+            DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
+            NavigationView navigationView = findViewById(R.id.nav_view);
+            navigationView.setNavigationItemSelectedListener(this);
+            userServiceImpl = new UserServiceImpl();
+            cryptoCurrencyServiceImpl = new CryptoCurrencyServiceImpl(getApplicationContext());
+            userServiceImpl.addUserFirstTime();
+            cryptoCurrencyServiceImpl.addCryptoCurrencyFirstTime();
+            recyclerView = findViewById(R.id.recycler);
+            helper = new Helper();
+            helper.getCryptoCurreciesFromDB();
+            RecyclerViewPrincipalAdapter controller = new
+                    RecyclerViewPrincipalAdapter(this);
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            recyclerView.setAdapter(controller);
+            refresh(realm);
+            textView = findViewById(R.id.textView2);
+        } finally {
+            realm.close();
+        }
 
     }
 
     @Override
     public void onBackPressed() {
         DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
@@ -113,7 +101,7 @@ public class MainController extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
-        if(id == R.id.action_settings) {
+        if (id == R.id.action_settings) {
             return true;
         }
 
@@ -153,23 +141,38 @@ public class MainController extends AppCompatActivity
         return false;
     }
 
-    private void refresh() {
-
+    private void refresh(final Realm realm) {
         realmChangeListener = new RealmChangeListener() {
             @Override
             public void onChange(Object o) {
                 RecyclerViewPrincipalAdapter recyclerViewPrincipalAdapter =
-                        new RecyclerViewPrincipalAdapter(MainController.this, helper.refreshCryptoCurrencies(), realm);
+                        new RecyclerViewPrincipalAdapter(MainController.this);
             }
         };
         realm.addChangeListener(realmChangeListener);
-
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        if (!realm.isClosed()) {
+            realm.close();
+        }
         realm.removeAllChangeListeners();
-        realm.close();
+    }
+
+    private void updateCurren() {
+        System.out.println("UPDATECURREN");
+        System.out.println(value);
+        realm.executeTransaction(new Realm.Transaction() {
+            @Override
+            public void execute(Realm realm) {
+                CryptoCurrency currency = realm.where(CryptoCurrency.class).findFirst();
+                System.out.println(currency.getName());
+                currency.setName("BitCoin");
+                currency.setValue(0);
+                currency.setImgName("cr1");
+            }
+        });
     }
 }

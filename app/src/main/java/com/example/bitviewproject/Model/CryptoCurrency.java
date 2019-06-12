@@ -16,6 +16,16 @@ public class CryptoCurrency extends RealmObject {
 
     private int value;
 
+    private String imgName;
+
+    public String getImgName() {
+        return imgName;
+    }
+
+    public void setImgName(String imgName) {
+        this.imgName = imgName;
+    }
+
     public int getId() {
         return id;
     }

@@ -2,11 +2,12 @@ package com.example.bitviewproject.Controller;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.bitviewproject.Adapters.UserDetailsAdapters.RecyclerViewUserDetailsAdapter;
@@ -24,53 +25,65 @@ public class DetailsUsersController extends AppCompatActivity {
     Realm realm;
     private Short totalCount = 0;
 
-    TextView total;
+    TextView total, username;
+    ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detailsusers);
 
-        realm = Realm.getDefaultInstance();
+
         recyclerView = findViewById(R.id.recyclerViewUserDetails);
         total = findViewById(R.id.txtTotal);
+        imageView = findViewById(R.id.userImage);
+        username = findViewById(R.id.txtUsername);
 
         SharedPreferences preferences = getSharedPreferences("SharedPreferencesUserLogin", Context.MODE_PRIVATE);
         String id = preferences.getString("userId", "0");
         ArrayList<CryptoCurrency> arrayList = new ArrayList<>();
 
-        Log.e("DETAILS", "------>" + id);
-        User user = realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst();
+        try {
+            realm = Realm.getDefaultInstance();
 
-        if (user == null){
-            Log.e("DETAILS", "EL USUARIO ES NULO GUEY");
-            total.setText("");
-        } else {
-            for (CryptoCurrency c : user.getCryptoCurrencies()) {
-                Log.i("DETAILS", "------" + c.getName() + "-------");
-                totalCount ++;
+            Log.e("DETAILS", "------>" + id);
+            User user = realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst();
+
+            if (user == null){
+                Log.e("DETAILS", "EL USUARIO ES NULO GUEY");
+                total.setText("");
+                imageView.setImageResource(R.drawable.logo);
+                username.setText("");
+                arrayList.add(new CryptoCurrency());
+            } else {
+                for (CryptoCurrency c : user.getCryptoCurrencies()) {
+                    Log.i("DETAILS", "------" + c.getName() + "-------");
+                    totalCount ++;
+                }
+                total.setText(Short.toString(totalCount));
+                imageView.setImageResource(R.drawable.flip);
+                username.setText(user.getName());
+
+                for (CryptoCurrency c : realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst().getCryptoCurrencies()){
+                    arrayList.add(c);
+                    Log.e("ADDTOARRAYLIST", "-------->" + c.getName());
+                }
             }
-            total.setText(Short.toString(totalCount));
 
-            for (CryptoCurrency c : realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst().getCryptoCurrencies()){
-                arrayList.add(c);
-                Log.e("ADDTOARRAYLIST", "-------->" + c.getName());
-            }
-        }
-        if (arrayList.isEmpty()) {
-            arrayList.add(new CryptoCurrency());
+            RecyclerViewUserDetailsAdapter controller = new
+                    RecyclerViewUserDetailsAdapter(realm, this, arrayList);
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            recyclerView.setAdapter(controller);
+
+        } finally {
+            realm.close();
         }
 
-        RecyclerViewUserDetailsAdapter controller = new
-                RecyclerViewUserDetailsAdapter(realm, this, arrayList);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(controller);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        realm.close();
         finish();
     }
 }

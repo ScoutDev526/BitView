@@ -78,43 +78,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7183c3e4-8679-4144-b7f5-21e622457f0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_camera.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_gallery.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_manage.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_send.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_share.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_menu_slideshow.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/side_nav_bar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_5_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_protobuf_protobuf_java_3_6_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_12_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_4_0_0_RC1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_1_15_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_2_2_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_bitcoinj_bitcoinj_core_0_15_2_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_bouncycastle_bcprov_jdk15on_1_60_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_31_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_31_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Helper/HelperBitCoinAPI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/APIObjects.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/CryptoCurrencyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/HolderViewListofCryptoCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/HolderViewListofCryptoCurrency.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/RecyclerViewListofCryptoCurrencyAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/RecyclerViewListofCryptoCurrencyAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/MainAdapters/RecyclerViewPrincipalAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/MainAdapters/RecyclerViewPrincipalAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/HolderViewUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/HolderViewUserDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/RecyclerViewUserDetailsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/RecyclerViewUserDetailsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/BitViewApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/BitViewApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/CryptoCurrencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/CryptoCurrencyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/DetailsUsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/DetailsUsersController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/ListofCryptoCurrenciesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/ListofCryptoCurrenciesActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Repository/CryptoCurrencyRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Helper/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Helper/Helper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/CryptoCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/CryptoCurrency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/CryptoCurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/CryptoCurrencyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailsusers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailsusers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/listof_cardviews.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/listof_cardviews.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/listof_cryptocurrencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/listof_cryptocurrencies.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/login_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/login_activity.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/principal_cardviews.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/principal_cardviews.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/userdetails_cardviews.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/userdetails_cardviews.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -122,6 +137,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
@@ -148,86 +166,46 @@
     <favorites_list name="BitView" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="144" column="42" selection-start-line="144" selection-start-column="42" selection-end-line="144" selection-end-column="42" />
+            <state relative-caret-position="198">
+              <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#refresh#0;class#MainController#0" />
-                <element signature="e#5725#6039#0" expanded="true" />
-                <element signature="e#6038#6039#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/HolderViewUserDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/DetailsUsersController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="method#onBackPressed#0;class#MainController#0" />
+                <element signature="method#onCreateOptionsMenu#0;class#MainController#0" />
+                <element signature="method#onOptionsItemSelected#0;class#MainController#0" />
+                <element signature="method#onNavigationItemSelected#0;class#MainController#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/RecyclerViewUserDetailsAdapter.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/RecyclerViewListofCryptoCurrencyAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
+            <state relative-caret-position="558">
+              <caret line="134" column="27" selection-start-line="134" selection-start-column="15" selection-end-line="134" selection-end-column="27" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1960#1961#0" expanded="true" />
+                <element signature="e#978#979#0" expanded="true" />
+                <element signature="e#1016#1017#0" expanded="true" />
+                <element signature="e#3265#3454#0" expanded="true" />
+                <element signature="e#3453#3454#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detailsusers.xml">
-          <provider editor-type-id="android-designer2" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/MainAdapters/RecyclerViewPrincipalAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/userdetails_cardviews.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="603">
-              <caret line="148" column="47" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/RecyclerViewListofCryptoCurrencyAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-244">
-              <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+            <state relative-caret-position="1045">
+              <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#799#800#0" expanded="true" />
+                <element signature="e#837#838#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -238,11 +216,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Class" />
-        <option value="resourceFile" />
         <option value="layoutResourceFile" />
         <option value="layoutResourceFile_vertical" />
+        <option value="Interface" />
+        <option value="resourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -250,6 +228,12 @@
     <findStrings>
       <find>i</find>
       <find>putString</find>
+      <find>json</find>
+      <find>app</find>
+      <find>jsonobject</find>
+      <find>tag</find>
+      <find>API</find>
+      <find>realm</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject</dir>
@@ -261,33 +245,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/principal_cardviews.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/MainAdapters/HolderViewPrincipalAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/side_menu.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/side_menu.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Other.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Fragment/HomeFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Other/CircleTransform.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/listof_cryptocurrencies.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/CryptoCurrencyController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/HolderViewListofCryptoCurrency.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/ListofCryptoCurrenciesActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/CryptoCurrency.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Helper/Helper.java" />
-        <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/google-services.json" />
-        <option value="$PROJECT_DIR$/app/google-services.json" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/login_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detailsuserscontroller.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/listof_cardviews.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/HolderViewListofCryptoCurrency.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/userdetails_cardviews.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/MainAdapters/RecyclerViewPrincipalAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Repository/CryptoCurrencyRepository.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/User.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detailsusers.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_user_sidemenu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_user_sidemenu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/UserSideMenuController.java" />
@@ -297,26 +257,50 @@
         <option value="$PROJECT_DIR$/app/src/main/res/menu/drawermenu.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/drawer_layout.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/UserService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/ListofCryptoCurrenciesActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/BitViewApplication.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/LoginController.java" />
         <option value="$USER_HOME$/AndroidStudio/DeviceExplorer/Nexus_5X_API_26 [emulator-5554]/data/data/com.example.bitviewproject/shared_prefs/SharedPreferencesUserLogin.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/RecyclerViewListofCryptoCurrencyAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/userdetails_cardviews.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/CryptoCurrency.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/UserServiceService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/UserService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/principal_cardview_background.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/drawable/sidemenu_top_background.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/listof_cryptocurrencies.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detailsusers.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/listof_cardviews.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/login_activity.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/MainController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/DetailsUsersController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/CryptoCurrency.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/principal_cardviews.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/JsonReader.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/APIObjects.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/CryptoCurrencyService.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/HolderViewListofCryptoCurrency.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/HolderViewUserDetails.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/RecyclerViewUserDetailsAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/DetailsUsersController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Helper/HelperBitCoinAPI.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/CryptoCurrencyController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/ListofCryptoCurrenciesActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Helper/Helper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/CryptoCurrencyServiceImpl.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/MainAdapters/RecyclerViewPrincipalAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/MainController.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/RecyclerViewListofCryptoCurrencyAdapter.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2324" />
+    <option name="x" value="1360" />
     <option name="width" value="956" />
     <option name="height" value="1044" />
   </component>
@@ -327,23 +311,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="BitView" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BitView" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="BitView" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BitView" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -375,7 +342,7 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="bitviewproject" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="Adapters" type="462c0819:PsiDirectoryNode" />
-              <item name="UserDetailsAdapters" type="462c0819:PsiDirectoryNode" />
+              <item name="ListofCurrenciesAdapters" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BitView" type="1abcf292:AndroidViewProjectNode" />
@@ -389,41 +356,38 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="bitviewproject" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BitView" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="bitviewproject" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BitView" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="generatedJava" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="BitView" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="BitView" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="BitView" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="BitView" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="menu" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BitView" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BitView" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="BitView" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BitView" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -611,10 +575,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1360" y="0" width="1920" height="1044" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Build Variants" order="0" sideWeight="0.50545853" side_tool="true" weight="0.21504803" />
       <window_info id="Captures" order="1" sideWeight="0.50545853" side_tool="true" weight="0.21504803" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.4945415" visible="true" weight="0.20917822" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.4945415" visible="true" weight="0.18569905" />
       <window_info id="Structure" order="3" sideWeight="0.50545853" side_tool="true" weight="0.21504803" />
       <window_info id="Image Layers" order="4" />
       <window_info id="Designer" order="5" />
@@ -622,20 +587,20 @@
       <window_info id="Capture Tool" order="7" />
       <window_info id="Favorites" order="8" sideWeight="0.50545853" side_tool="true" weight="0.21504803" />
       <window_info id="UI Designer" order="9" />
-      <window_info active="true" anchor="bottom" id="Build" order="0" sideWeight="0.49786553" visible="true" weight="0.17358078" />
+      <window_info anchor="bottom" id="Build" order="0" sideWeight="0.49786553" weight="0.40283844" />
       <window_info anchor="bottom" id="Messages" order="1" sideWeight="0.49925706" weight="0.32949308" />
       <window_info anchor="bottom" id="Android Profiler" order="2" sideWeight="0.4994664" weight="0.32969433" />
       <window_info anchor="bottom" id="Logcat" order="3" sideWeight="0.49733192" weight="0.6855895" />
       <window_info anchor="bottom" id="Version Control" order="4" sideWeight="0.49893278" weight="0.40174672" />
-      <window_info anchor="bottom" id="TODO" order="5" sideWeight="0.49893278" weight="0.3286026" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32969433" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49839914" weight="0.32751092" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5026681" side_tool="true" weight="0.3558952" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49733192" weight="0.40611354" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32969433" />
+      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.49839914" weight="0.32751092" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5026681" side_tool="true" weight="0.3558952" />
+      <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.49893278" weight="0.3286026" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49733192" weight="0.74126637" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.2510917" />
       <window_info anchor="right" id="Gradle" order="0" weight="0.32977587" />
-      <window_info anchor="right" id="Preview" order="1" sideWeight="0.49563318" weight="0.43062967" />
-      <window_info anchor="right" id="Device File Explorer" order="2" sideWeight="0.5043668" side_tool="true" weight="0.34418356" />
+      <window_info anchor="right" id="Preview" order="1" sideWeight="0.49563318" weight="0.4284952" />
+      <window_info anchor="right" id="Device File Explorer" order="2" sideWeight="0.5043668" side_tool="true" weight="0.40875134" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Assistant" order="5" weight="0.33457845" />
@@ -729,235 +694,225 @@
     <option name="LAST_COMMIT_MESSAGE" value="Lista de Monedas (enlaza con detalles)" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/CryptoCurrencyService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detailsusers.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#578#1149#0" expanded="true" />
-            <element signature="e#1148#1149#0" expanded="true" />
-            <element signature="e#1977#1978#0" expanded="true" />
-            <element signature="e#2000#2001#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="297">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e17ad93976f2dfefefbcb788908ea6f0/jars/classes.jar!/android/support/v7/widget/RecyclerView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="5989" column="29" selection-start-line="5989" selection-start-column="29" selection-end-line="5989" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/apt/debug/io/realm/com_example_bitviewproject_Model_CryptoCurrencyRealmProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/CryptoCurrency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AndroidStudio/DeviceExplorer/Nexus_5X_API_26 [emulator-5554]/data/data/com.example.bitviewproject/shared_prefs/othersharedpreference.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Helper/Helper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="37" column="52" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#614#615#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-            <element signature="method#refreshUsers#0;class#Helper#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/MainAdapters/RecyclerViewPrincipalAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="45" column="53" selection-start-line="45" selection-start-column="53" selection-end-line="45" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2028#2029#0" expanded="true" />
-            <element signature="e#2074#2075#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/MainAdapters/HolderViewPrincipalAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/HolderViewListofCryptoCurrency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cryptocurrency.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listof_cryptocurrencies.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Repository/CryptoCurrencyRepository.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Repository/UserRepository.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-v21/styles.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listof_cardviews.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="83" column="39" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_user_sidemenu.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_user_sidemenu.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_user_sidemenu.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_user_sidemenu_drawer.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_user_sidemenu.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/UserSideMenuController.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/user_side_menu.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/drawermenu.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/header.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="e#359#399#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1278">
+          <caret line="71" column="46" selection-start-line="71" selection-start-column="46" selection-end-line="71" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+        <state relative-caret-position="680">
+          <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/userdetails_cardviews.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2214">
+          <caret line="123" column="60" selection-start-line="123" selection-start-column="60" selection-end-line="123" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listof_cardviews.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/login_activity.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="968">
+          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/cr1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/cr10.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/cr11.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/cr12.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/cr13.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/cr14.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/cr16.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/cr17.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/cr19.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/cr3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/cr2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/principal_cardviews.xml">
+      <provider editor-type-id="android-designer2" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradle.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/JsonReader.java" />
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-28/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="6277" column="22" selection-start-line="6277" selection-start-column="22" selection-end-line="6277" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.realm/realm-android-library-object-server/5.11.0/ed2c32cab9f27c910552c37ca48768c7bc633697/realm-android-library-object-server-5.11.0-sources.jar!/io/realm/Case.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/apt/debug/io/realm/com_example_bitviewproject_Model_CryptoCurrencyRealmProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="47" column="52" selection-start-line="47" selection-start-column="52" selection-end-line="48" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.realm/realm-android-library-object-server/5.11.0/ed2c32cab9f27c910552c37ca48768c7bc633697/realm-android-library-object-server-5.11.0-sources.jar!/io/realm/BaseRealm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="436" selection-start-line="436" selection-end-line="436" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/HolderViewListofCryptoCurrency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
           <folding>
-            <element signature="e#238#264#0" expanded="true" />
-            <element signature="e#401#436#0" expanded="true" />
-            <element signature="e#460#493#0" expanded="true" />
-            <element signature="e#519#554#0" expanded="true" />
-            <element signature="e#851#877#0" expanded="true" />
-            <element signature="e#1095#1131#0" expanded="true" />
-            <element signature="e#1153#1179#0" expanded="true" />
-            <element signature="e#1414#1443#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/drawer_layout.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/HolderViewUserDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
+        <state relative-caret-position="270">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/RecyclerViewUserDetailsAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="252">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/DetailsUsersController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        <state relative-caret-position="1141">
+          <caret line="85" column="26" selection-start-line="85" selection-start-column="26" selection-end-line="85" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/SplashController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/APIObjects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="e#267#268#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="method#setCryptoCurrencies#0;class#User#0" />
-          </folding>
+        <state relative-caret-position="72">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/UserService.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
-          <folding>
-            <element signature="method#isUserEmpty#0;class#UserService#0" />
-          </folding>
+        <state relative-caret-position="72">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AndroidStudio/DeviceExplorer/Nexus_5X_API_26 [emulator-5554]/data/data/com.example.bitviewproject/files/BitViewDataBase.realm">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/CryptoCurrencyService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="144">
+          <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -974,106 +929,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state relative-caret-position="882">
+          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$USER_HOME$/Android/Sdk/sources/android-28/org/json/JSONObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="79" column="50" selection-start-line="79" selection-start-column="50" selection-end-line="79" selection-end-column="50" />
+        <state relative-caret-position="296">
+          <caret line="174" column="11" selection-start-line="174" selection-start-column="11" selection-end-line="174" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/RecyclerViewListofCryptoCurrencyAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/MainAdapters/HolderViewPrincipalAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-244">
-          <caret line="30" column="11" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        <state relative-caret-position="72">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Helper/Helper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1255#1256#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/ListofCryptoCurrenciesActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="34" column="40" lean-forward="true" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        <state relative-caret-position="378">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AndroidStudio/DeviceExplorer/Nexus_5X_API_26 [emulator-5554]/data/data/com.example.bitviewproject/shared_prefs/SharedPreferencesUserLogin.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/CryptoCurrency.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="504">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#439#440#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_cryptocurrency.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detailsusers.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Helper/HelperBitCoinAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        <state relative-caret-position="576">
+          <caret line="32" column="43" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1206#3472#0" />
+            <element signature="e#4320#4740#0" expanded="true" />
+            <element signature="e#4739#4740#0" expanded="true" />
+            <element signature="e#6834#6866#1" />
+            <element signature="e#6387#6388#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/userdetails_cardviews.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/CryptoCurrencyController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="148" column="47" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="47" />
+        <state relative-caret-position="306">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/CryptoCurrencyServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding>
+            <element signature="e#864#1435#0" expanded="true" />
+            <element signature="e#1434#1435#0" expanded="true" />
+            <element signature="e#1437#1670#0" expanded="true" />
+            <element signature="e#1669#1670#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/MainAdapters/RecyclerViewPrincipalAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="144" column="42" selection-start-line="144" selection-start-column="42" selection-end-line="144" selection-end-column="42" />
+        <state relative-caret-position="198">
+          <caret line="38" column="36" lean-forward="true" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#refresh#0;class#MainController#0" />
-            <element signature="e#5725#6039#0" expanded="true" />
-            <element signature="e#6038#6039#0" expanded="true" />
+            <element signature="method#onBackPressed#0;class#MainController#0" />
+            <element signature="method#onCreateOptionsMenu#0;class#MainController#0" />
+            <element signature="method#onOptionsItemSelected#0;class#MainController#0" />
+            <element signature="method#onNavigationItemSelected#0;class#MainController#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/HolderViewUserDetails.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/RecyclerViewListofCryptoCurrencyAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="67" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+        <state relative-caret-position="558">
+          <caret line="134" column="27" selection-start-line="134" selection-start-column="15" selection-end-line="134" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/DetailsUsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/RecyclerViewUserDetailsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="47" column="60" selection-start-line="47" selection-start-column="60" selection-end-line="47" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1960#1961#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#3265#3454#0" expanded="true" />
+            <element signature="e#3453#3454#0" expanded="true" />
           </folding>
         </state>
       </provider>

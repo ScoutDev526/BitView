@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
-    <!--<color name="principalAzul">#4fb5f9</color>
-    <color name="principalBlanco">f3f0ef</color>-->
+    <color name="principalAzul">#4fb5f9</color>
+    <color name="principalBlanco">#f3f0ef</color>
+
+    <color name="priceBlue">#00BAFF</color>
+    <color name="secondBlue">#07adeb</color>
 </resources>

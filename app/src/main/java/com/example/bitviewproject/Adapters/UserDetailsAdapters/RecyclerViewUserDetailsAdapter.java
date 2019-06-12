@@ -16,12 +16,12 @@ import io.realm.Realm;
 
 public class RecyclerViewUserDetailsAdapter extends RecyclerView.Adapter<HolderViewUserDetails> {
 
-    final Realm realm;
+    Realm realm;
     final Context context;
     ArrayList <CryptoCurrency> cryptoCurrencies;
 
     public RecyclerViewUserDetailsAdapter(Realm realm, Context context, ArrayList<CryptoCurrency> cryptoCurrencies) {
-        this.realm = realm;
+        //this.realm = realm;
         this.context = context;
         this.cryptoCurrencies = cryptoCurrencies;
     }

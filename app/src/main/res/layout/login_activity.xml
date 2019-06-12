@@ -1,66 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="100dp"
     android:gravity="center"
+    android:background="@drawable/flat"
     tools:context=".Controller.LoginController">
 
+
+
     <LinearLayout
+
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="375dp"
+        android:background="@drawable/bg"
         android:orientation="vertical">
 
         <View
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="#ffa500"/>
+            android:background="@drawable/gradienteenano" />
 
         <FrameLayout
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="-25dp"
-            android:background="#000000">
+            android:background="@drawable/enanocoin">
 
         </FrameLayout>
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="201dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
             android:text="UserName"
-            android:textStyle="bold"
             android:textSize="22sp"
-            android:layout_marginStart="5dp"/>
+            android:textStyle="bold" />
 
         <EditText
+            android:gravity="center"
             android:id="@+id/loginUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="UserName"/>
+            android:hint="UserName" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="201dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
             android:text="PassWord"
-            android:textStyle="bold"
             android:textSize="22sp"
-            android:layout_marginStart="5dp"/>
+            android:textStyle="bold" />
 
         <EditText
+            android:gravity="center"
             android:id="@+id/loginPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="PassWord" />
 
         <Button
+            android:gravity="center"
             android:id="@+id/btnLogin"
+            android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Login"/>
+            android:background="@drawable/botonentrar"
+            android:text="" />
+
+        <!--<ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="145dp"
+            android:layout_height="42dp"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@drawable/botonentrar" />-->
 
     </LinearLayout>
 

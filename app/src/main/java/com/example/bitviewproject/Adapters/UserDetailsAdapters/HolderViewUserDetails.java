@@ -21,7 +21,7 @@ public class HolderViewUserDetails  extends RecyclerView.ViewHolder {
     public HolderViewUserDetails(@NonNull View itemView) {
         super(itemView);
 
-        realm = Realm.getDefaultInstance();
+        //realm = Realm.getDefaultInstance();
         idCurrency = itemView.findViewById(R.id.idCurrencyUserDetails);
         nameCurrency = itemView.findViewById(R.id.nameCurrencyUserDetails);
         valueCurrency = itemView.findViewById(R.id.valueCurrencyUserDetails);

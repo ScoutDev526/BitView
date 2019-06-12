@@ -22,7 +22,6 @@ public class HolderViewListofCryptoCurrency extends RecyclerView.ViewHolder {
 
     public HolderViewListofCryptoCurrency(@NonNull View itemView) {
         super(itemView);
-        realm = Realm.getDefaultInstance();
         ID = itemView.findViewById(R.id.cardID);
         txtNameCurrency = itemView.findViewById(R.id.nameCurrencyListof);
         iconCurrency = itemView.findViewById(R.id.iconCurrencyListof);

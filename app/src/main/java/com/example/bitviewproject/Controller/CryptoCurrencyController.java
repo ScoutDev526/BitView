@@ -1,15 +1,15 @@
 package com.example.bitviewproject.Controller;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.example.bitviewproject.Model.CryptoCurrency;
 import com.example.bitviewproject.Model.User;
 import com.example.bitviewproject.R;
-import com.example.bitviewproject.Service.impl.CryptoCurrencyService;
-import com.example.bitviewproject.Service.impl.UserService;
+import com.example.bitviewproject.Service.impl.CryptoCurrencyServiceImpl;
+import com.example.bitviewproject.Service.impl.UserServiceImpl;
 
 import io.realm.Realm;
 
@@ -26,8 +26,8 @@ public class CryptoCurrencyController extends AppCompatActivity {
     TextView TxtOtherDataDateDetails;
     TextView otherDataDateDetails;
 
-    UserService userService;
-    CryptoCurrencyService cryptoCurrencyService;
+    UserServiceImpl userServiceImpl;
+    CryptoCurrencyServiceImpl cryptoCurrencyServiceImpl;
     User user;
     CryptoCurrency cryptoCurrency;
 
@@ -44,22 +44,27 @@ public class CryptoCurrencyController extends AppCompatActivity {
         otherDataCreatorDetails = findViewById(R.id.otherDataCreatorDetails);
         otherDataDateDetails = findViewById(R.id.otherDataDateDetails);
 
-        realm = Realm.getDefaultInstance();
+        try {
+            realm = Realm.getDefaultInstance();
 
-        userService = new UserService(realm);
-        cryptoCurrencyService = new CryptoCurrencyService(realm);
+            userServiceImpl = new UserServiceImpl();
+            cryptoCurrencyServiceImpl = new CryptoCurrencyServiceImpl(getApplicationContext());
 
-        Intent intent = getIntent();
-        int currencyId = intent.getIntExtra("currencyId", 0);
+            Intent intent = getIntent();
+            int currencyId = intent.getIntExtra("currencyId", 0);
 
-        cryptoCurrency = realm.where(CryptoCurrency.class)
-                .equalTo("id", currencyId).findFirst();
+            cryptoCurrency = realm.where(CryptoCurrency.class)
+                    .equalTo("id", currencyId).findFirst();
 
-        nameCurrencyDetails.setText(cryptoCurrency.getName());
-        valueCurrencyDetails.setText("Valor: " + cryptoCurrency.getValue());
-        otherDataNameDetails.setText("Ya pondra algo aqui");
-        otherDataDateDetails.setText("Ya pondra algo aqui");
-        otherDataCreatorDetails.setText("Ya pondra algo aqui");
+            nameCurrencyDetails.setText(cryptoCurrency.getName());
+            valueCurrencyDetails.setText("Valor: " + cryptoCurrency.getValue());
+            otherDataNameDetails.setText("Ya pondra algo aqui");
+            otherDataDateDetails.setText("Ya pondra algo aqui");
+            otherDataCreatorDetails.setText("Ya pondra algo aqui");
+
+        } finally {
+            realm.close();
+        }
 
     }
 

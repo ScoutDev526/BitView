@@ -29,43 +29,47 @@ public class LoginController extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
 
-        realm = Realm.getDefaultInstance();
+        try {
+            realm = Realm.getDefaultInstance();
 
-        username = findViewById(R.id.loginUsername);
-        password = findViewById(R.id.loginPassword);
-        final Context context = getApplicationContext();
-        sharedPreferences = getSharedPreferences("SharedPreferencesUserLogin", Context.MODE_PRIVATE);
+            username = findViewById(R.id.loginUsername);
+            password = findViewById(R.id.loginPassword);
+            final Context context = getApplicationContext();
+            sharedPreferences = getSharedPreferences("SharedPreferencesUserLogin", Context.MODE_PRIVATE);
 
-        loginButon = findViewById(R.id.btnLogin);
-        loginButon.setOnClickListener(new View.OnClickListener() {
+            loginButon = findViewById(R.id.btnLogin);
+            loginButon.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                User userLog = realm.where(User.class)
-                        .equalTo("username", username.getText().toString()).findFirst();
+                @Override
+                public void onClick(View v) {
+                    User userLog = realm.where(User.class)
+                            .equalTo("username", username.getText().toString()).findFirst();
 
-                if (userLog.getPassword().equals(password.getText().toString())) {
+                    if (userLog.getPassword().equals(password.getText().toString())) {
 
-                    Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Success", Toast.LENGTH_SHORT).show();
 
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putString("userId", Integer.toString(userLog.getId()));
-                    Log.i("SHAREDPREFERENCE", "SE HA GUARDADO ESTO ----->" + userLog.getId());
-                    editor.apply();
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("userId", Integer.toString(userLog.getId()));
+                        Log.i("SHAREDPREFERENCE", "SE HA GUARDADO ESTO ----->" + userLog.getId());
+                        editor.apply();
 
-                    finish();
+                        finish();
 
-                } else {
+                    } else {
 
-                    Toast.makeText(context, "Failure", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context, "Failure", Toast.LENGTH_SHORT).show();
 
-                    username.setText("");
-                    username.setHint("Pruebe otro usuario");
-                    password.setText("");
-                    password.setHint("Pruebe otra password");
+                        username.setText("");
+                        username.setHint("Pruebe otro usuario");
+                        password.setText("");
+                        password.setHint("Pruebe otra password");
 
+                    }
                 }
-            }
-        });
+            });
+        } finally {
+            realm.close();
+        }
     }
 }

@@ -1,10 +1,9 @@
 package com.example.bitviewproject.Controller;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.Button;
 
 import com.example.bitviewproject.Adapters.ListofCurrenciesAdapters.RecyclerViewListofCryptoCurrencyAdapter;
 import com.example.bitviewproject.Helper.Helper;
@@ -26,23 +25,25 @@ public class ListofCryptoCurrenciesActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerViewListCurrencies);
 
-        realm = Realm.getDefaultInstance();
+        try {
+            realm = Realm.getDefaultInstance();
 
-        helper = new Helper(realm);
-        helper.getCryptoCurrenciesSortByValueFromDB();
+            helper = new Helper();
+            helper.getCryptoCurrenciesSortByValueFromDB();
 
-        RecyclerViewListofCryptoCurrencyAdapter adapter =
-                new RecyclerViewListofCryptoCurrencyAdapter(realm, this, helper.refreshCryptoCurrencies());
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adapter);
+            RecyclerViewListofCryptoCurrencyAdapter adapter =
+                    new RecyclerViewListofCryptoCurrencyAdapter(this);
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            recyclerView.setAdapter(adapter);
 
-
+        } finally {
+            realm.close();
+        }
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        realm.close();
         finish();
     }
 }
