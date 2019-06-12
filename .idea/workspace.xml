@@ -78,6 +78,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7183c3e4-8679-4144-b7f5-21e622457f0b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_code_gson_gson_2_8_5_jar.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_protobuf_protobuf_java_3_6_1_jar.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okhttp3_okhttp_3_12_1_jar.xml" afterDir="false" />
@@ -86,50 +87,6 @@
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_okio_okio_2_2_2_jar.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_bitcoinj_bitcoinj_core_0_15_2_jar.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_bouncycastle_bcprov_jdk15on_1_60_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_annotations_13_0_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_1_3_31_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_kotlin_kotlin_stdlib_common_1_3_31_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Helper/HelperBitCoinAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/APIObjects.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/CryptoCurrencyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/HolderViewListofCryptoCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/HolderViewListofCryptoCurrency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/RecyclerViewListofCryptoCurrencyAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/RecyclerViewListofCryptoCurrencyAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/MainAdapters/RecyclerViewPrincipalAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/MainAdapters/RecyclerViewPrincipalAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/HolderViewUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/HolderViewUserDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/RecyclerViewUserDetailsAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/UserDetailsAdapters/RecyclerViewUserDetailsAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/CryptoCurrencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/CryptoCurrencyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/DetailsUsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/DetailsUsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/ListofCryptoCurrenciesActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/ListofCryptoCurrenciesActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Helper/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Helper/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/CryptoCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/CryptoCurrency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/CryptoCurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/CryptoCurrencyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailsusers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detailsusers.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/listof_cardviews.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/listof_cardviews.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/listof_cryptocurrencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/listof_cryptocurrencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/login_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/login_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/main_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/principal_cardviews.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/principal_cardviews.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/userdetails_cardviews.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/userdetails_cardviews.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -182,10 +139,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/RecyclerViewListofCryptoCurrencyAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
+            <state relative-caret-position="1854">
               <caret line="134" column="27" selection-start-line="134" selection-start-column="15" selection-end-line="134" selection-end-column="27" />
               <folding>
                 <element signature="e#978#979#0" expanded="true" />
@@ -193,6 +150,15 @@
                 <element signature="e#3265#3454#0" expanded="true" />
                 <element signature="e#3453#3454#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/ListofCryptoCurrenciesActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -290,12 +256,12 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Helper/HelperBitCoinAPI.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/CryptoCurrencyController.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/ListofCryptoCurrenciesActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Helper/Helper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Service/impl/CryptoCurrencyServiceImpl.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/MainAdapters/RecyclerViewPrincipalAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/MainController.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/RecyclerViewListofCryptoCurrencyAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/ListofCryptoCurrenciesActivity.java" />
       </list>
     </option>
   </component>
@@ -575,7 +541,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1360" y="0" width="1920" height="1044" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Build Variants" order="0" sideWeight="0.50545853" side_tool="true" weight="0.21504803" />
       <window_info id="Captures" order="1" sideWeight="0.50545853" side_tool="true" weight="0.21504803" />
@@ -961,13 +926,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/ListofCryptoCurrenciesActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Model/CryptoCurrency.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -1044,7 +1002,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Adapters/ListofCurrenciesAdapters/RecyclerViewListofCryptoCurrencyAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
+        <state relative-caret-position="1854">
           <caret line="134" column="27" selection-start-line="134" selection-start-column="15" selection-end-line="134" selection-end-column="27" />
           <folding>
             <element signature="e#978#979#0" expanded="true" />
@@ -1052,6 +1010,13 @@
             <element signature="e#3265#3454#0" expanded="true" />
             <element signature="e#3453#3454#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/bitviewproject/Controller/ListofCryptoCurrenciesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="30" column="34" lean-forward="true" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
         </state>
       </provider>
     </entry>
