@@ -3,6 +3,7 @@ package com.example.bitviewproject.Adapters.ListofCurrenciesAdapters;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -46,26 +47,21 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
     public void onBindViewHolder(@NonNull final HolderViewListofCryptoCurrency holder, int i) {
         //final CryptoCurrency currency = cryptoCurrencies.get(i);
         //final int currenId = currency.getId();
-        User user;
         try {
             realm = Realm.getDefaultInstance();
             RealmResults<CryptoCurrency> cryptoCurrencies = realm.where(CryptoCurrency.class).sort("value", Sort.DESCENDING).findAll();
             final CryptoCurrency currency = cryptoCurrencies.get(i);
             final int currenId = currency.getId();
-
             SharedPreferences preferences = context.getSharedPreferences("SharedPreferencesUserLogin", Context.MODE_PRIVATE);
             String id = preferences.getString("userId", "0");
-
-            user = realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst();
-
-            Log.e(TAG, "-----------------------------------");
-            Log.e(TAG, Integer.toString(currenId));
-
+            User user = realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst();
+            System.out.println(currency);
             holder.txtNameCurrency.setText(currency.getShortName());
             holder.ID.setText(Integer.toString(currency.getId()));
-            Log.e(TAG, "----> currencyID = " + currency.getId());
-            holder.iconCurrency.setImageResource(R.drawable.flip);
-
+            Resources resources = context.getResources();
+            final int resourceId = resources.getIdentifier(currency.getFullName().toLowerCase().replace(" ", ""),
+                    "drawable", context.getPackageName());
+            holder.iconCurrency.setImageResource(resourceId);
             boolean used = false;
             try {
                 if (user != null) {

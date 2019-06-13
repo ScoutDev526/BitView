@@ -33,6 +33,15 @@ public class Helper {
         }
     }
 
+    public void getCryptoCurrenciesSortByValueFromDBLimit(){
+        try {
+            realm = Realm.getDefaultInstance();
+            cryptoCurrencies = realm.where(CryptoCurrency.class).limit(5).sort("value", Sort.DESCENDING).findAll();
+        } finally {
+            realm.close();
+        }
+    }
+
     public void getCryptoCurrenciesSortByValueFromDB(){
         try {
             realm = Realm.getDefaultInstance();

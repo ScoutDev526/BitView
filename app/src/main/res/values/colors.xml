@@ -9,4 +9,6 @@
 
     <color name="priceBlue">#00BAFF</color>
     <color name="secondBlue">#07adeb</color>
+
+    <color name="negativeUpdate">#db0000</color>
 </resources>

@@ -5,7 +5,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="100dp"
     android:gravity="center"
     android:background="@drawable/flat"
     tools:context=".Controller.LoginController">
@@ -14,8 +13,8 @@
 
     <LinearLayout
 
-        android:layout_width="match_parent"
-        android:layout_height="375dp"
+        android:layout_width="225dp"
+        android:layout_height="350dp"
         android:background="@drawable/bg"
         android:orientation="vertical">
 
@@ -37,13 +36,14 @@
             android:layout_width="201dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:gravity="center"
+            android:gravity="left"
             android:text="UserName"
+            android:fontFamily="@font/nexabook"
             android:textSize="22sp"
             android:textStyle="bold" />
 
         <EditText
-            android:gravity="center"
+            android:gravity="left"
             android:id="@+id/loginUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,17 +53,19 @@
             android:layout_width="201dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:gravity="center"
+            android:gravity="left"
             android:text="PassWord"
+            android:fontFamily="@font/nexabook"
             android:textSize="22sp"
             android:textStyle="bold" />
 
         <EditText
-            android:gravity="center"
+            android:gravity="left"
             android:id="@+id/loginPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="PassWord" />
+            android:hint="PassWord"
+            android:inputType="textPassword" />
 
         <Button
             android:gravity="center"
@@ -74,13 +76,6 @@
             android:layout_gravity="center_horizontal"
             android:background="@drawable/botonentrar"
             android:text="" />
-
-        <!--<ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="145dp"
-            android:layout_height="42dp"
-            android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/botonentrar" />-->
 
     </LinearLayout>
 
