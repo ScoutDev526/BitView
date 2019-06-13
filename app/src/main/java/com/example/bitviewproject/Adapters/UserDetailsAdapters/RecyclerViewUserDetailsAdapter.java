@@ -1,6 +1,7 @@
 package com.example.bitviewproject.Adapters.UserDetailsAdapters;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -22,7 +23,6 @@ public class RecyclerViewUserDetailsAdapter extends RecyclerView.Adapter<HolderV
     ArrayList <CryptoCurrency> cryptoCurrencies;
 
     public RecyclerViewUserDetailsAdapter(Realm realm, Context context, ArrayList<CryptoCurrency> cryptoCurrencies) {
-        //this.realm = realm;
         this.context = context;
         this.cryptoCurrencies = cryptoCurrencies;
     }
@@ -39,15 +39,19 @@ public class RecyclerViewUserDetailsAdapter extends RecyclerView.Adapter<HolderV
     public void onBindViewHolder(@NonNull HolderViewUserDetails holder, int i) {
         if (cryptoCurrencies != null && cryptoCurrencies.get(0).getId() != 0) {
             final CryptoCurrency currency = cryptoCurrencies.get(i);
-
             String doubleValue = new DecimalFormat("#.##").format(currency.getValue());
+            holder.nameCurrency.setText(currency.getFullName());
             holder.idCurrency.setText(Integer.toString(currency.getId()));
-            holder.nameCurrency.setText(currency.getShortName());
-            holder.valueCurrency.setText(doubleValue);
+            holder.shortNameCurrency.setText(currency.getShortName());
+            holder.valueCurrency.setText(doubleValue + " €");
+            Resources resources = context.getResources();
+            final int resourceId = resources.getIdentifier(currency.getFullName().toLowerCase().replace(" ", ""),
+                    "drawable", context.getPackageName());
+            holder.imageView.setImageResource(resourceId);
         }else {
             holder.idCurrency.setText("1234");
-            holder.nameCurrency.setText("BitView");
-            holder.valueCurrency.setText("979796");
+            holder.shortNameCurrency.setText("BVW");
+            holder.valueCurrency.setText("979796 €");
             holder.imageView.setImageResource(R.drawable.bit);
         }
 

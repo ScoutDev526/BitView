@@ -6,7 +6,6 @@
     card_view:cardCornerRadius="4dp"
     card_view:cardElevation="4dp"
     card_view:cardUseCompatPadding="true"
-    android:layout_margin="10dp"
     android:id="@+id/cardViewListof">
 
     <TextView
@@ -30,8 +29,10 @@
         <LinearLayout
             android:layout_width="154dp"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginStart="30dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
             android:layout_weight="3"
             android:weightSum="2">
 
@@ -44,9 +45,11 @@
 
                 <TextView
                     android:id="@+id/nameCurrencyListof"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:text="Moneda"
+                    android:fontFamily="@font/nexaheavy"
                     android:textColor="#000000"
                     android:textSize="25sp"
                     android:textStyle="bold" />
@@ -67,24 +70,17 @@
                     android:background="@drawable/anadir"
                     android:text="" />
 
-                <!--<ImageButton
-                    android:id="@+id/imageButton2"
-                    android:layout_width="125dp"
-                    android:layout_height="32dp"
-                    card_view:srcCompat="@drawable/anadir" />-->
-
             </LinearLayout>
-
 
         </LinearLayout>
 
         <ImageView
             android:id="@+id/iconCurrencyListof"
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
             android:layout_marginEnd="-35dp"
-            android:src="@drawable/flip" />
+            android:src="@drawable/bitcoin" />
     </LinearLayout>
 
 

@@ -8,23 +8,20 @@ import android.widget.TextView;
 
 import com.example.bitviewproject.R;
 
-import io.realm.Realm;
-
 public class HolderViewUserDetails  extends RecyclerView.ViewHolder {
 
-    TextView idCurrency;
     TextView nameCurrency;
+    TextView idCurrency;
+    TextView shortNameCurrency;
     TextView valueCurrency;
     ImageView imageView;
-    Realm realm;
 
     public HolderViewUserDetails(@NonNull View itemView) {
         super(itemView);
-
-        //realm = Realm.getDefaultInstance();
         idCurrency = itemView.findViewById(R.id.idCurrencyUserDetails);
-        nameCurrency = itemView.findViewById(R.id.nameCurrencyUserDetails);
+        shortNameCurrency = itemView.findViewById(R.id.nameCurrencyShortUserDetails);
         valueCurrency = itemView.findViewById(R.id.valueCurrencyUserDetails);
         imageView = itemView.findViewById(R.id.iconCurrencyListof);
+        nameCurrency = itemView.findViewById(R.id.nameCurrencyUserDetails);
     }
 }

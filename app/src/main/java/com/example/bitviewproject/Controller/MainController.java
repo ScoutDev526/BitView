@@ -19,38 +19,19 @@ import android.widget.Toast;
 
 import com.example.bitviewproject.Adapters.MainAdapters.RecyclerViewPrincipalAdapter;
 import com.example.bitviewproject.Helper.Helper;
-import com.example.bitviewproject.Helper.HelperBitCoinAPI;
-import com.example.bitviewproject.Model.CryptoCurrency;
 import com.example.bitviewproject.R;
-import com.example.bitviewproject.Service.impl.CryptoCurrencyServiceImpl;
-import com.example.bitviewproject.Service.impl.UserServiceImpl;
 
 import io.realm.Realm;
 import io.realm.RealmChangeListener;
-import okhttp3.OkHttpClient;
 
 public class MainController extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    TextView textView;
     RecyclerView recyclerView;
-
     RealmChangeListener realmChangeListener;
-
-    UserServiceImpl userServiceImpl;
-    CryptoCurrencyServiceImpl cryptoCurrencyServiceImpl;
-
     Realm realm;
     Helper helper;
-    HelperBitCoinAPI bitCoinAPI;
-
-    //Button changeLayout, changeLogin, actionLogout, changeUserDetails;
-
-    public static final String JSON_LIST_CURRENCIES = "https://api.cryptonator.com/api/full/btc-usd";
-    private OkHttpClient okHttpClient = new OkHttpClient();
-
-    TextView textView;
-    String value;
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -58,16 +39,12 @@ public class MainController extends AppCompatActivity
         setContentView(R.layout.main_activity);
 
         realm = Realm.getDefaultInstance();
-        DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
+        DrawerLayout drawerLayout = findViewById(R.id.drawerLayoutMain);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        userServiceImpl = new UserServiceImpl();
-        cryptoCurrencyServiceImpl = new CryptoCurrencyServiceImpl(getApplicationContext());
-        userServiceImpl.addUserFirstTime();
-        cryptoCurrencyServiceImpl.addCryptoCurrencyFirstTime();
         recyclerView = findViewById(R.id.recycler);
         helper = new Helper();
-        helper.getCryptoCurreciesFromDB();
+        helper.getCryptoCurrenciesSortByValueFromDBLimit();
         RecyclerViewPrincipalAdapter controller = new
                 RecyclerViewPrincipalAdapter(this, helper.refreshCryptoCurrencies());
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -85,7 +62,7 @@ public class MainController extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
+        DrawerLayout drawerLayout = findViewById(R.id.drawerLayoutMain);
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
@@ -138,20 +115,9 @@ public class MainController extends AppCompatActivity
                 Toast.makeText(this, "SEND", Toast.LENGTH_SHORT).show();
                 break;
         }
-        DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
+        DrawerLayout drawerLayout = findViewById(R.id.drawerLayoutMain);
         drawerLayout.closeDrawer(GravityCompat.START);
         return false;
-    }
-
-    private void refresh(final Realm realm) {
-        realmChangeListener = new RealmChangeListener() {
-            @Override
-            public void onChange(Object o) {
-                RecyclerViewPrincipalAdapter recyclerViewPrincipalAdapter =
-                        new RecyclerViewPrincipalAdapter(MainController.this, helper.refreshCryptoCurrencies());
-            }
-        };
-        realm.addChangeListener(realmChangeListener);
     }
 
     @Override
@@ -159,20 +125,5 @@ public class MainController extends AppCompatActivity
         super.onDestroy();
         realm.removeAllChangeListeners();
         realm.close();
-    }
-
-    private void updateCurren() {
-        System.out.println("UPDATECURREN");
-        System.out.println(value);
-        realm.executeTransaction(new Realm.Transaction() {
-            @Override
-            public void execute(Realm realm) {
-                CryptoCurrency currency = realm.where(CryptoCurrency.class).findFirst();
-                System.out.println(currency.getShortName());
-                currency.setShortName("BitCoin");
-                currency.setValue(0);
-                currency.setImgName("cr1");
-            }
-        });
     }
 }

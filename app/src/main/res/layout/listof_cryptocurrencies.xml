@@ -3,70 +3,71 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayoutListof"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    android:padding="20dp"
-
     tools:context=".Controller.ListofCryptoCurrenciesActivity">
 
-    <TextView
-        android:id="@+id/titleListCurrencies"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="BitView"
-        android:textColor="#000000"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_background"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <View
-        android:id="@+id/separators"
-        android:layout_width="match_parent"
-        android:layout_height="2sp"
-        android:layout_marginTop="10dp"
-        android:background="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleListCurrencies" />
+            <TextView
+                android:id="@+id/titleListCurrencies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="BitView"
+                android:textColor="#000000"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nexablack"/>
 
-    <TextView
-        android:id="@+id/txt_listCurrencies"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:text="List of CryptoCurrencies:"
-        android:textColor="#000000"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/separators" />
+            <View
+                android:id="@+id/separators"
+                android:layout_width="match_parent"
+                android:layout_height="6sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="#ffffff"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerViewListCurrencies"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_listCurrencies">
+            <TextView
+                android:id="@+id/txt_listCurrencies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30sp"
+                android:text="List of CryptoCurrencies"
+                android:textColor="#000000"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nexabook" />
+
+        </LinearLayout>
 
 
-    </android.support.v7.widget.RecyclerView>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewListCurrencies"
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header">
 
-    <Button
-        android:id="@+id/refreshBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="update"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+
+        </android.support.v7.widget.RecyclerView>
 
 </android.support.constraint.ConstraintLayout>

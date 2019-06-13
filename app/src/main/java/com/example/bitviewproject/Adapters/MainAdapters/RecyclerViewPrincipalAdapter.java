@@ -3,6 +3,7 @@ package com.example.bitviewproject.Adapters.MainAdapters;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -47,24 +48,21 @@ public class RecyclerViewPrincipalAdapter extends RecyclerView.Adapter<HolderVie
             realm = Realm.getDefaultInstance();
             RealmResults<CryptoCurrency> currencies = realm.where(CryptoCurrency.class).sort("value", Sort.DESCENDING).findAll();
             currencySize = currencies.size();
-            System.out.println("------>" + currencySize);
             final CryptoCurrency currency = currencies.get(i);
-
             String doubleValue = new DecimalFormat("#.##").format(currency.getValue());
             String doubleUpdate = new DecimalFormat("#.##").format(currency.getUpdate());
-
-            System.out.println("-----> *** " + doubleValue);
-
             holder.txtNameCurrency.setText(currency.getShortName());
             holder.txtValue.setText(doubleValue.concat(" €"));
-            holder.txtUpdate.setText(doubleUpdate.concat(" €"));
-
-            //holder.iconCurrency.setImageResource(R.drawable + "");
+            if (doubleUpdate.startsWith("-")){
+                holder.txtUpdate.setText(doubleUpdate.concat(" €"));
+                holder.txtUpdate.setTextColor(Color.RED);
+            } else {
+                holder.txtUpdate.setText("+".concat(doubleUpdate.concat(" €")));
+            }
             Resources resources = context.getResources();
-            final int resourceId = resources.getIdentifier(currency.getImgName() != null ? currency.getImgName() : "flip",
+            final int resourceId = resources.getIdentifier(currency.getFullName().toLowerCase().replace(" ", ""),
                     "drawable", context.getPackageName());
             holder.iconCurrency.setImageResource(resourceId);
-
             holder.cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -76,7 +74,6 @@ public class RecyclerViewPrincipalAdapter extends RecyclerView.Adapter<HolderVie
         } finally {
             realm.close();
         }
-
     }
 
     @Override
