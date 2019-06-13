@@ -15,6 +15,8 @@ import com.example.bitviewproject.Model.CryptoCurrency;
 import com.example.bitviewproject.Model.User;
 import com.example.bitviewproject.R;
 
+import java.util.ArrayList;
+
 import io.realm.Realm;
 import io.realm.RealmResults;
 import io.realm.Sort;
@@ -25,9 +27,11 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
 
     Realm realm;
     final Context context;
+    ArrayList<CryptoCurrency> currencies;
 
-    public RecyclerViewListofCryptoCurrencyAdapter(Context context) {
+    public RecyclerViewListofCryptoCurrencyAdapter(Context context, ArrayList<CryptoCurrency> currencies) {
         this.context = context;
+        this.currencies = currencies;
     }
 
     @NonNull
@@ -57,7 +61,7 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
             Log.e(TAG, "-----------------------------------");
             Log.e(TAG, Integer.toString(currenId));
 
-            holder.txtNameCurrency.setText(currency.getName());
+            holder.txtNameCurrency.setText(currency.getShortName());
             holder.ID.setText(Integer.toString(currency.getId()));
             Log.e(TAG, "----> currencyID = " + currency.getId());
             holder.iconCurrency.setImageResource(R.drawable.flip);
@@ -116,7 +120,7 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
                             Log.d(TAG, "Ha funcionado xd");
                             Log.i(TAG, "La i tambien funsiona");
                             holder.button.setEnabled(false);
-                            //holder.button.setVisibility(View.INVISIBLE);
+                            holder.button.setVisibility(View.INVISIBLE);
                         }
                     }, new Realm.Transaction.OnError() {
                         @Override
@@ -133,7 +137,7 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
 
     @Override
     public int getItemCount() {
-        return 0;
+        return currencies.size();
     }
 
     @Override

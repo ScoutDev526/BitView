@@ -24,18 +24,14 @@ public class ListofCryptoCurrenciesActivity extends AppCompatActivity {
         setContentView(R.layout.listof_cryptocurrencies);
 
         recyclerView = findViewById(R.id.recyclerViewListCurrencies);
-
         try {
             realm = Realm.getDefaultInstance();
-
             helper = new Helper();
             helper.getCryptoCurrenciesSortByValueFromDB();
-
             RecyclerViewListofCryptoCurrencyAdapter adapter =
-                    new RecyclerViewListofCryptoCurrencyAdapter(this);
+                    new RecyclerViewListofCryptoCurrencyAdapter(this, helper.refreshCryptoCurrencies());
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             recyclerView.setAdapter(adapter);
-
         } finally {
             realm.close();
         }

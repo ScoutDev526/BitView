@@ -86,6 +86,29 @@
         <TableRow
             android:padding="10dp">
             <TextView
+                android:id="@+id/txt_otherDataShortNameDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abreviatura: "
+                android:layout_weight="4"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/otherDataShortNameDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Abreviatura de la moneda"
+                android:layout_weight="6"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:padding="10dp">
+            <TextView
                 android:id="@+id/txt_otherDataNameDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -93,13 +116,13 @@
                 android:layout_weight="4"
                 android:textColor="#000000"
                 android:textSize="15sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/otherDataNameDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nombre de la moneda"
+                android:text="Nombre de la Moneda"
                 android:layout_weight="6"
                 android:textColor="#000000"
                 android:textSize="15sp"
@@ -109,20 +132,20 @@
         <TableRow
             android:padding="10dp">
             <TextView
-                android:id="@+id/txt_otherDataCreatorDetails"
+                android:id="@+id/txt_otherDataValueDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Creador: "
+                android:text="Valor: "
                 android:layout_weight="4"
                 android:textColor="#000000"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/otherDataCreatorDetails"
+                android:id="@+id/otherDataValueDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Creador de la moneda"
+                android:text="Valor"
                 android:layout_weight="6"
                 android:textColor="#000000"
                 android:textSize="15sp"
@@ -132,20 +155,20 @@
         <TableRow
             android:padding="10dp">
             <TextView
-                android:id="@+id/txt_otherDataDateDetails"
+                android:id="@+id/txt_otherDataBalanceDetails"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fecha de Creacion: "
+                android:text="Balance: "
                 android:layout_weight="4"
                 android:textColor="#000000"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/otherDataDateDetails"
+                android:id="@+id/otherDataBalanceDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fecha de creacion de la moneda"
+                android:text="Balance"
                 android:layout_weight="6"
                 android:textColor="#000000"
                 android:textSize="15sp"

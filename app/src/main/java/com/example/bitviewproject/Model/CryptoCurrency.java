@@ -12,11 +12,31 @@ public class CryptoCurrency extends RealmObject {
     private int id;
 
     @Required
-    private String name;
+    private String shortName;
 
-    private int value;
+    private String fullName;
+
+    private double value;
 
     private String imgName;
+
+    private double update;
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public double getUpdate() {
+        return update;
+    }
+
+    public void setUpdate(double update) {
+        this.update = update;
+    }
 
     public String getImgName() {
         return imgName;
@@ -34,19 +54,19 @@ public class CryptoCurrency extends RealmObject {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getShortName() {
+        return shortName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setShortName(String shortName) {
+        this.shortName = shortName;
     }
 
-    public int getValue() {
+    public double getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(double value) {
         this.value = value;
     }
 }

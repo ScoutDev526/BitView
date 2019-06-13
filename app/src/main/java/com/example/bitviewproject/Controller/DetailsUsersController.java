@@ -57,7 +57,7 @@ public class DetailsUsersController extends AppCompatActivity {
                 arrayList.add(new CryptoCurrency());
             } else {
                 for (CryptoCurrency c : user.getCryptoCurrencies()) {
-                    Log.i("DETAILS", "------" + c.getName() + "-------");
+                    Log.i("DETAILS", "------" + c.getShortName() + "-------");
                     totalCount ++;
                 }
                 total.setText(Short.toString(totalCount));
@@ -66,7 +66,7 @@ public class DetailsUsersController extends AppCompatActivity {
 
                 for (CryptoCurrency c : realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst().getCryptoCurrencies()){
                     arrayList.add(c);
-                    Log.e("ADDTOARRAYLIST", "-------->" + c.getName());
+                    Log.e("ADDTOARRAYLIST", "-------->" + c.getShortName());
                 }
             }
 

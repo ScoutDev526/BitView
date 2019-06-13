@@ -11,20 +11,18 @@ import com.example.bitviewproject.R;
 import com.example.bitviewproject.Service.impl.CryptoCurrencyServiceImpl;
 import com.example.bitviewproject.Service.impl.UserServiceImpl;
 
+import java.text.DecimalFormat;
+
 import io.realm.Realm;
 
 public class CryptoCurrencyController extends AppCompatActivity {
 
     TextView nameCurrencyDetails;
-    TextView txtValueDetails;
     TextView valueCurrencyDetails;
-    TextView txtInfoCurrencyDetails;
-    TextView txtOtherDataNameDetails;
+    TextView otherDataShortNameDetails;
     TextView otherDataNameDetails;
-    TextView TxtOtherDataCreatorDetails;
-    TextView otherDataCreatorDetails;
-    TextView TxtOtherDataDateDetails;
-    TextView otherDataDateDetails;
+    TextView otherDataValueDetails;
+    TextView otherDataBalanceDetails;
 
     UserServiceImpl userServiceImpl;
     CryptoCurrencyServiceImpl cryptoCurrencyServiceImpl;
@@ -40,9 +38,10 @@ public class CryptoCurrencyController extends AppCompatActivity {
 
         nameCurrencyDetails = findViewById(R.id.nameCurrencyDetails);
         valueCurrencyDetails = findViewById(R.id.valueCurrencyDetails);
+        otherDataShortNameDetails = findViewById(R.id.otherDataShortNameDetails);
         otherDataNameDetails = findViewById(R.id.otherDataNameDetails);
-        otherDataCreatorDetails = findViewById(R.id.otherDataCreatorDetails);
-        otherDataDateDetails = findViewById(R.id.otherDataDateDetails);
+        otherDataValueDetails = findViewById(R.id.otherDataValueDetails);
+        otherDataBalanceDetails = findViewById(R.id.otherDataBalanceDetails);
 
         try {
             realm = Realm.getDefaultInstance();
@@ -56,11 +55,15 @@ public class CryptoCurrencyController extends AppCompatActivity {
             cryptoCurrency = realm.where(CryptoCurrency.class)
                     .equalTo("id", currencyId).findFirst();
 
-            nameCurrencyDetails.setText(cryptoCurrency.getName());
-            valueCurrencyDetails.setText("Valor: " + cryptoCurrency.getValue());
-            otherDataNameDetails.setText("Ya pondra algo aqui");
-            otherDataDateDetails.setText("Ya pondra algo aqui");
-            otherDataCreatorDetails.setText("Ya pondra algo aqui");
+            double USDValue = cryptoCurrency.getValue() / 0.89;
+            System.out.println(USDValue + " $");
+
+            nameCurrencyDetails.setText(cryptoCurrency.getFullName());
+            valueCurrencyDetails.setText(cryptoCurrency.getValue() + " €");
+            otherDataShortNameDetails.setText(cryptoCurrency.getShortName());
+            otherDataValueDetails.setText(cryptoCurrency.getValue() + " €");
+            otherDataNameDetails.setText(cryptoCurrency.getFullName());
+            otherDataBalanceDetails.setText(new DecimalFormat("#.####").format(cryptoCurrency.getUpdate()));
 
         } finally {
             realm.close();

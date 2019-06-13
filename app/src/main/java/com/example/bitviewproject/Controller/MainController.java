@@ -57,28 +57,30 @@ public class MainController extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        try {
-            realm = Realm.getDefaultInstance();
-            DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
-            NavigationView navigationView = findViewById(R.id.nav_view);
-            navigationView.setNavigationItemSelectedListener(this);
-            userServiceImpl = new UserServiceImpl();
-            cryptoCurrencyServiceImpl = new CryptoCurrencyServiceImpl(getApplicationContext());
-            userServiceImpl.addUserFirstTime();
-            cryptoCurrencyServiceImpl.addCryptoCurrencyFirstTime();
-            recyclerView = findViewById(R.id.recycler);
-            helper = new Helper();
-            helper.getCryptoCurreciesFromDB();
-            RecyclerViewPrincipalAdapter controller = new
-                    RecyclerViewPrincipalAdapter(this);
-            recyclerView.setLayoutManager(new LinearLayoutManager(this));
-            recyclerView.setAdapter(controller);
-            refresh(realm);
-            textView = findViewById(R.id.textView2);
-        } finally {
-            realm.close();
-        }
-
+        realm = Realm.getDefaultInstance();
+        DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+        userServiceImpl = new UserServiceImpl();
+        cryptoCurrencyServiceImpl = new CryptoCurrencyServiceImpl(getApplicationContext());
+        userServiceImpl.addUserFirstTime();
+        cryptoCurrencyServiceImpl.addCryptoCurrencyFirstTime();
+        recyclerView = findViewById(R.id.recycler);
+        helper = new Helper();
+        helper.getCryptoCurreciesFromDB();
+        RecyclerViewPrincipalAdapter controller = new
+                RecyclerViewPrincipalAdapter(this, helper.refreshCryptoCurrencies());
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(controller);
+        textView = findViewById(R.id.textView2);
+        realmChangeListener = new RealmChangeListener() {
+            @Override
+            public void onChange(Object o) {
+                RecyclerViewPrincipalAdapter recyclerViewPrincipalAdapter =
+                        new RecyclerViewPrincipalAdapter(MainController.this, helper.refreshCryptoCurrencies());
+            }
+        };
+        realm.addChangeListener(realmChangeListener);
     }
 
     @Override
@@ -146,7 +148,7 @@ public class MainController extends AppCompatActivity
             @Override
             public void onChange(Object o) {
                 RecyclerViewPrincipalAdapter recyclerViewPrincipalAdapter =
-                        new RecyclerViewPrincipalAdapter(MainController.this);
+                        new RecyclerViewPrincipalAdapter(MainController.this, helper.refreshCryptoCurrencies());
             }
         };
         realm.addChangeListener(realmChangeListener);
@@ -155,10 +157,8 @@ public class MainController extends AppCompatActivity
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (!realm.isClosed()) {
-            realm.close();
-        }
         realm.removeAllChangeListeners();
+        realm.close();
     }
 
     private void updateCurren() {
@@ -168,8 +168,8 @@ public class MainController extends AppCompatActivity
             @Override
             public void execute(Realm realm) {
                 CryptoCurrency currency = realm.where(CryptoCurrency.class).findFirst();
-                System.out.println(currency.getName());
-                currency.setName("BitCoin");
+                System.out.println(currency.getShortName());
+                currency.setShortName("BitCoin");
                 currency.setValue(0);
                 currency.setImgName("cr1");
             }

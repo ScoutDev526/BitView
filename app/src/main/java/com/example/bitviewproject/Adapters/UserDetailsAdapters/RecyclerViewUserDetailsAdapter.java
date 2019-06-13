@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import com.example.bitviewproject.Model.CryptoCurrency;
 import com.example.bitviewproject.R;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import io.realm.Realm;
@@ -38,9 +39,11 @@ public class RecyclerViewUserDetailsAdapter extends RecyclerView.Adapter<HolderV
     public void onBindViewHolder(@NonNull HolderViewUserDetails holder, int i) {
         if (cryptoCurrencies != null && cryptoCurrencies.get(0).getId() != 0) {
             final CryptoCurrency currency = cryptoCurrencies.get(i);
+
+            String doubleValue = new DecimalFormat("#.##").format(currency.getValue());
             holder.idCurrency.setText(Integer.toString(currency.getId()));
-            holder.nameCurrency.setText(currency.getName());
-            holder.valueCurrency.setText(Integer.toString(currency.getValue()));
+            holder.nameCurrency.setText(currency.getShortName());
+            holder.valueCurrency.setText(doubleValue);
         }else {
             holder.idCurrency.setText("1234");
             holder.nameCurrency.setText("BitView");

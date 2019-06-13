@@ -35,7 +35,7 @@ public class CryptoCurrencyServiceImpl implements CryptoCurrencyService {
                             Number maxId = bgRealm.where(CryptoCurrency.class).max("id");
                             int newKey = (maxId == null) ? 1 : maxId.intValue() + 1;
                             CryptoCurrency currency = bgRealm.createObject(CryptoCurrency.class, newKey);
-                            currency.setName(newKey + "MONEDA");
+                            currency.setShortName(newKey + "MONEDA");
                             currency.setValue(newKey);
                         }
                     }, new Realm.Transaction.OnSuccess() {

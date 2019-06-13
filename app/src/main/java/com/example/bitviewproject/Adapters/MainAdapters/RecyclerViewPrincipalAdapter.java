@@ -13,17 +13,24 @@ import com.example.bitviewproject.Controller.CryptoCurrencyController;
 import com.example.bitviewproject.Model.CryptoCurrency;
 import com.example.bitviewproject.R;
 
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+
 import io.realm.Realm;
 import io.realm.RealmResults;
+import io.realm.Sort;
 
 public class RecyclerViewPrincipalAdapter extends RecyclerView.Adapter<HolderViewPrincipalAdapter> {
 
     Realm realm;
+    int currencySize;
+    ArrayList<CryptoCurrency> currencies;
 
     private Context context;
 
-    public RecyclerViewPrincipalAdapter(Context context) {
+    public RecyclerViewPrincipalAdapter(Context context, ArrayList<CryptoCurrency> currencies) {
         this.context = context;
+        this.currencies = currencies;
     }
 
     @NonNull
@@ -31,7 +38,6 @@ public class RecyclerViewPrincipalAdapter extends RecyclerView.Adapter<HolderVie
     public HolderViewPrincipalAdapter onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(context)
                 .inflate(R.layout.principal_cardviews, viewGroup, false);
-
         return new HolderViewPrincipalAdapter(view);
     }
 
@@ -39,11 +45,19 @@ public class RecyclerViewPrincipalAdapter extends RecyclerView.Adapter<HolderVie
     public void onBindViewHolder(@NonNull HolderViewPrincipalAdapter holder, int i) {
         try {
             realm = Realm.getDefaultInstance();
-            RealmResults<CryptoCurrency> currencies = realm.where(CryptoCurrency.class).findAll();
+            RealmResults<CryptoCurrency> currencies = realm.where(CryptoCurrency.class).sort("value", Sort.DESCENDING).findAll();
+            currencySize = currencies.size();
+            System.out.println("------>" + currencySize);
             final CryptoCurrency currency = currencies.get(i);
 
-            holder.txtNameCurrency.setText(currency.getName());
-            holder.txtValue.setText(currency.getValue() + "€");
+            String doubleValue = new DecimalFormat("#.##").format(currency.getValue());
+            String doubleUpdate = new DecimalFormat("#.##").format(currency.getUpdate());
+
+            System.out.println("-----> *** " + doubleValue);
+
+            holder.txtNameCurrency.setText(currency.getShortName());
+            holder.txtValue.setText(doubleValue.concat(" €"));
+            holder.txtUpdate.setText(doubleUpdate.concat(" €"));
 
             //holder.iconCurrency.setImageResource(R.drawable + "");
             Resources resources = context.getResources();
@@ -67,7 +81,7 @@ public class RecyclerViewPrincipalAdapter extends RecyclerView.Adapter<HolderVie
 
     @Override
     public int getItemCount() {
-        return 0;
+        return currencies.size();
     }
 
     @Override
