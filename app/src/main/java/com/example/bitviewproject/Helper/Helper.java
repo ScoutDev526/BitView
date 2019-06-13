@@ -2,57 +2,52 @@ package com.example.bitviewproject.Helper;
 
 import com.example.bitviewproject.Model.CryptoCurrency;
 import com.example.bitviewproject.Model.User;
-import com.example.bitviewproject.Service.impl.CryptoCurrencyService;
-import com.example.bitviewproject.Service.impl.UserService;
+import com.example.bitviewproject.Service.impl.CryptoCurrencyServiceImpl;
+import com.example.bitviewproject.Service.impl.UserServiceImpl;
 
 import java.util.ArrayList;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
+import io.realm.Sort;
 
 public class Helper {
 
-    CryptoCurrencyService cryptoCurrencyService;
-    UserService userService;
+    CryptoCurrencyServiceImpl cryptoCurrencyServiceImpl;
+    UserServiceImpl userServiceImpl;
 
     Realm realm;
     RealmResults<User> users;
     RealmResults<CryptoCurrency> cryptoCurrencies;
 
-    public Helper(Realm realm) {
+    /*public Helper(Realm realm) {
         this.realm = realm;
-    }
+    }*/
 
-    public void getUserFromDB(){
-
-        users = userService.getAllUser();
-
-    }
     public void getCryptoCurreciesFromDB(){
+        try {
+            realm = Realm.getDefaultInstance();
+            cryptoCurrencies = realm.where(CryptoCurrency.class).findAll();
+        } finally {
+            realm.close();
+        }
+    }
 
-        cryptoCurrencies = realm.where(CryptoCurrency.class).findAll();
-
+    public void getCryptoCurrenciesSortByValueFromDB(){
+        try {
+            realm = Realm.getDefaultInstance();
+            cryptoCurrencies = realm.where(CryptoCurrency.class).sort("value", Sort.DESCENDING).findAll();
+        } finally {
+            realm.close();
+        }
     }
 
     public ArrayList<User> refreshUsers(){
-
-        ArrayList<User> userList = new ArrayList<>();
-        for (User u : users){
-            userList.add(u);
-        }
-
-        return userList;
-
+        return new ArrayList<>(users);
     }
 
     public ArrayList<CryptoCurrency> refreshCryptoCurrencies(){
-
-        ArrayList<CryptoCurrency> currenciesList = new ArrayList<>();
-        for(CryptoCurrency cc : cryptoCurrencies){
-            currenciesList.add(cc);
-        }
-
-        return currenciesList;
+        return new ArrayList<>(cryptoCurrencies);
 
     }
 }
