@@ -94,12 +94,10 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:layout_gravity="end"
                 android:id="@+id/logonName"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:hint="Nombre"
-                android:inputType="textPassword" />
+                android:hint="Nombre" />
 
         </LinearLayout>
 
@@ -122,8 +120,7 @@
                 android:id="@+id/logonApellido"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:hint="Apellidos"
-                android:inputType="textPassword" />
+                android:hint="Apellidos" />
 
         </LinearLayout>
 
@@ -146,8 +143,7 @@
                 android:id="@+id/logonEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Correo Electronico"
-                android:inputType="textPassword" />
+                android:hint="Correo Electronico" />
 
         </LinearLayout>
 
