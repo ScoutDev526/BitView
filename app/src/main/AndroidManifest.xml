@@ -14,6 +14,7 @@
         <activity android:name=".Controller.ListofCryptoCurrenciesActivity" />
         <activity android:name=".Controller.CryptoCurrencyController" />
         <activity android:name=".Controller.LoginController" />
+        <activity android:name=".Controller.LogonController" />
         <activity android:name=".Controller.MainController" />
         <activity android:name=".Controller.SplashController">
             <intent-filter>

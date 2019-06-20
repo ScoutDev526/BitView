@@ -1,7 +1,5 @@
 package com.example.bitviewproject.Service.impl;
 
-import android.util.Log;
-
 import com.example.bitviewproject.Model.User;
 import com.example.bitviewproject.Service.UserService;
 
@@ -11,10 +9,6 @@ import io.realm.RealmResults;
 public class UserServiceImpl implements UserService {
 
     Realm realm;
-
-    /*public UserServiceImpl(Realm realm){
-        this.realm = realm;
-    }*/
 
 
     public void addUserFirstTime() {
@@ -37,12 +31,10 @@ public class UserServiceImpl implements UserService {
                     }, new Realm.Transaction.OnSuccess() {
                         @Override
                         public void onSuccess() {
-                            Log.v("BITVIEW", "AÑADE LOS USUARIOS");
                         }
                     }, new Realm.Transaction.OnError() {
                         @Override
                         public void onError(Throwable error) {
-                            Log.v("BITVIEW", "ERROR AL CREAR USUARIOS");
                         }
                     });
                 } catch (Exception e) {
@@ -50,10 +42,7 @@ public class UserServiceImpl implements UserService {
                 } finally {
                     realm.close();
                 }
-        } else {
-            Log.v("BITVIEW", "YA EXISTIAN DATOS USERS");
         }
-
     }
 
     public RealmResults<User> getAllUser() {

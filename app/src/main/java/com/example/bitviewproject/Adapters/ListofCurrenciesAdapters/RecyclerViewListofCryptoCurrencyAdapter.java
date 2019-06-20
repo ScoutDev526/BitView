@@ -6,7 +6,6 @@ import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,7 +54,6 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
             SharedPreferences preferences = context.getSharedPreferences("SharedPreferencesUserLogin", Context.MODE_PRIVATE);
             String id = preferences.getString("userId", "0");
             User user = realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst();
-            System.out.println(currency);
             holder.txtNameCurrency.setText(currency.getShortName());
             holder.ID.setText(Integer.toString(currency.getId()));
             Resources resources = context.getResources();
@@ -66,10 +64,8 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
             try {
                 if (user != null) {
                     for (CryptoCurrency c : user.getCryptoCurrencies()) {
-                        Log.i(TAG, "-----> " + c.getId());
                         if (c.getId() == currency.getId()) {
                             used = true;
-                            Log.e(TAG, "-------> used true");
                             break;
                         }
                     }
@@ -78,7 +74,6 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
                 }
 
             } catch (Exception e) {
-                Log.e("ERROR", String.valueOf(e));
             }
             if (used) {
                 holder.button.setEnabled(false);
@@ -106,15 +101,11 @@ public class RecyclerViewListofCryptoCurrencyAdapter extends RecyclerView.Adapte
 
                             User user = realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst();
                             CryptoCurrency cryptoCurrency = realm.where(CryptoCurrency.class).equalTo("id", Integer.parseInt(holder.ID.getText().toString())).findFirst();
-                            Log.i(TAG, "Se ha guardado en el usuario: " + user.getId());
-
                             user.getCryptoCurrencies().add(cryptoCurrency);
                         }
                     }, new Realm.Transaction.OnSuccess() {
                         @Override
                         public void onSuccess() {
-                            Log.d(TAG, "Ha funcionado xd");
-                            Log.i(TAG, "La i tambien funsiona");
                             holder.button.setEnabled(false);
                             holder.button.setVisibility(View.INVISIBLE);
                         }

@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.bitviewproject.Adapters.MainAdapters.RecyclerViewPrincipalAdapter;
 import com.example.bitviewproject.Helper.Helper;
+import com.example.bitviewproject.Helper.HelperCoinAPI;
 import com.example.bitviewproject.R;
 
 import io.realm.Realm;
@@ -58,6 +59,9 @@ public class MainController extends AppCompatActivity
             }
         };
         realm.addChangeListener(realmChangeListener);
+
+        HelperCoinAPI coinAPI = new HelperCoinAPI(getApplicationContext(), 1);
+        coinAPI.loadUpdate();
     }
 
     @Override
@@ -94,25 +98,21 @@ public class MainController extends AppCompatActivity
             case R.id.nav_listCurrencies:
                 Intent intentList = new Intent(getApplicationContext(), ListofCryptoCurrenciesActivity.class);
                 startActivity(intentList);
-                Toast.makeText(this, "Lista", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_profile:
                 Intent intentProfile = new Intent(getApplicationContext(), DetailsUsersController.class);
                 startActivity(intentProfile);
-                Toast.makeText(this, "GALLERY", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_logIn:
                 Intent intentLogin = new Intent(getApplicationContext(), LoginController.class);
                 startActivity(intentLogin);
-                Toast.makeText(this, "SHARE", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_logOut:
                 SharedPreferences preferences = getSharedPreferences("SharedPreferencesUserLogin", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = preferences.edit();
-                //editor.remove("userId");
                 editor.clear();
                 editor.apply();
-                Toast.makeText(this, "SEND", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Sesion Cerrada", Toast.LENGTH_SHORT).show();
                 break;
         }
         DrawerLayout drawerLayout = findViewById(R.id.drawerLayoutMain);

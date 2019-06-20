@@ -1,15 +1,10 @@
 package com.example.bitviewproject.Service.impl;
 
 import android.content.Context;
-import android.util.Log;
 
-import com.example.bitviewproject.Helper.HelperBitCoinAPI;
+import com.example.bitviewproject.Helper.HelperCoinAPI;
 import com.example.bitviewproject.Model.CryptoCurrency;
 import com.example.bitviewproject.Service.CryptoCurrencyService;
-
-import org.json.JSONException;
-
-import java.io.IOException;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
@@ -41,12 +36,10 @@ public class CryptoCurrencyServiceImpl implements CryptoCurrencyService {
                     }, new Realm.Transaction.OnSuccess() {
                         @Override
                         public void onSuccess() {
-                            Log.v("BITVIEW", "AÑADE LA MONEDA");
                         }
                     }, new Realm.Transaction.OnError() {
                         @Override
                         public void onError(Throwable error) {
-                            Log.v("BITVIEW", "ERROR CREANDO MONEDAS");
                         }
                     });
                 } catch (Exception e) {
@@ -55,18 +48,9 @@ public class CryptoCurrencyServiceImpl implements CryptoCurrencyService {
                     realm.close();
                 }
             }
-            HelperBitCoinAPI coinAPI = new HelperBitCoinAPI(context.getApplicationContext());
-            try {
-                coinAPI.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        } else {
-            Log.v("BITVIEW", "YA EXISTIAN DATOS CURRENCIES");
+            HelperCoinAPI coinAPI = new HelperCoinAPI(context.getApplicationContext(), 1);
+            coinAPI.load();
         }
-
     }
 
     public RealmResults<CryptoCurrency> getAllCurrencies() {

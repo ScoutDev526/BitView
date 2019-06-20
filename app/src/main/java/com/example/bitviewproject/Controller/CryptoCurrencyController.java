@@ -1,8 +1,10 @@
 package com.example.bitviewproject.Controller;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.bitviewproject.Model.CryptoCurrency;
@@ -23,6 +25,7 @@ public class CryptoCurrencyController extends AppCompatActivity {
     TextView otherDataNameDetails;
     TextView otherDataValueDetails;
     TextView otherDataBalanceDetails;
+    ImageView logoIcon;
 
     UserServiceImpl userServiceImpl;
     CryptoCurrencyServiceImpl cryptoCurrencyServiceImpl;
@@ -42,6 +45,7 @@ public class CryptoCurrencyController extends AppCompatActivity {
         otherDataNameDetails = findViewById(R.id.otherDataNameDetails);
         otherDataValueDetails = findViewById(R.id.otherDataValueDetails);
         otherDataBalanceDetails = findViewById(R.id.otherDataBalanceDetails);
+        logoIcon = findViewById(R.id.logoCurrencyDetails);
 
         try {
             realm = Realm.getDefaultInstance();
@@ -56,7 +60,6 @@ public class CryptoCurrencyController extends AppCompatActivity {
                     .equalTo("id", currencyId).findFirst();
 
             double USDValue = cryptoCurrency.getValue() / 0.89;
-            System.out.println(USDValue + " $");
 
             nameCurrencyDetails.setText(cryptoCurrency.getFullName());
             valueCurrencyDetails.setText(cryptoCurrency.getValue() + " €");
@@ -64,6 +67,11 @@ public class CryptoCurrencyController extends AppCompatActivity {
             otherDataValueDetails.setText(cryptoCurrency.getValue() + " €");
             otherDataNameDetails.setText(cryptoCurrency.getFullName());
             otherDataBalanceDetails.setText(new DecimalFormat("#.####").format(cryptoCurrency.getUpdate()));
+
+            Resources resources = this.getResources();
+            final int resourceId = resources.getIdentifier(cryptoCurrency.getFullName().toLowerCase().replace(" ", ""),
+                    "drawable", this.getPackageName());
+            logoIcon.setImageResource(resourceId);
 
         } finally {
             realm.close();

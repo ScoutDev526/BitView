@@ -45,20 +45,15 @@ public class DetailsUsersController extends AppCompatActivity {
 
         try {
             realm = Realm.getDefaultInstance();
-
-            Log.e("DETAILS", "------>" + id);
             User user = realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst();
 
             if (user == null){
-                Log.e("DETAILS", "EL USUARIO ES NULO GUEY");
                 total.setText("");
-                //imageView.setImageResource(R.drawable.logo);
                 imageView.setBackground(getDrawable(R.drawable.logo));
                 username.setText("");
                 arrayList.add(new CryptoCurrency());
             } else {
                 for (CryptoCurrency c : user.getCryptoCurrencies()) {
-                    Log.i("DETAILS", "------" + c.getShortName() + "-------");
                     totalCount ++;
                 }
                 total.setText(Short.toString(totalCount));
@@ -70,7 +65,6 @@ public class DetailsUsersController extends AppCompatActivity {
                 }
                 for (CryptoCurrency c : realm.where(User.class).equalTo("id", Integer.parseInt(id)).findFirst().getCryptoCurrencies()){
                     arrayList.add(c);
-                    Log.e("ADDTOARRAYLIST", "-------->" + c.getShortName());
                 }
             }
 

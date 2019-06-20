@@ -20,10 +20,6 @@ public class Helper {
     RealmResults<User> users;
     RealmResults<CryptoCurrency> cryptoCurrencies;
 
-    /*public Helper(Realm realm) {
-        this.realm = realm;
-    }*/
-
     public void getCryptoCurreciesFromDB(){
         try {
             realm = Realm.getDefaultInstance();
